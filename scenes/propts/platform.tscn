@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ve3vcswa3abg"]
+
+[ext_resource type="Script" uid="uid://dp2w8jg5d61sd" path="res://scenes/propts/platform.gd" id="1_6afqy"]
+[ext_resource type="Texture2D" uid="uid://bg83yav8gkuj0" path="res://assets/tile_sets/alpha_tileset_floor1.png" id="2_njwnu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bc10"]
+size = Vector2(16, 8)
+
+[node name="Platform" type="StaticBody2D" unique_id=865859534 node_paths=PackedStringArray("collision")]
+script = ExtResource("1_6afqy")
+collision = NodePath("CollisionShape2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1090195600]
+position = Vector2(0, 4)
+texture = ExtResource("2_njwnu")
+region_enabled = true
+region_rect = Rect2(32, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=958428607]
+shape = SubResource("RectangleShape2D_8bc10")
+one_way_collision = true

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bgnaqi5qoifvr"]
+
+[ext_resource type="Texture2D" uid="uid://bg83yav8gkuj0" path="res://assets/tile_sets/alpha_tileset_floor1.png" id="1_2grh0"]
+[ext_resource type="Script" uid="uid://bub1fdr8b8x8" path="res://scenes/propts/stair.gd" id="1_t3muf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mavp"]
+size = Vector2(16, 58.035713)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mhnnb"]
+size = Vector2(16, 8)
+
+[node name="Stair" type="StaticBody2D" unique_id=69445514 node_paths=PackedStringArray("area_2d")]
+script = ExtResource("1_t3muf")
+area_2d = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1653031417]
+texture = ExtResource("1_2grh0")
+region_enabled = true
+region_rect = Rect2(64, 16, 16, 16)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=864848136]
+scale = Vector2(1, 1.1199999)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=347939516]
+position = Vector2(0, -0.4464283)
+shape = SubResource("RectangleShape2D_7mavp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=575644472]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_mhnnb")
+one_way_collision = true

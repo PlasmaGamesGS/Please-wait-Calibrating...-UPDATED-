@@ -1,0 +1,40 @@
+[gd_scene load_steps=12 format=3 uid="uid://cbwkgt6imvh8n"]
+
+[ext_resource type="Script" uid="uid://p7wo7acarats" path="res://scenes/main_scene.gd" id="1_w2twt"]
+[ext_resource type="PackedScene" uid="uid://d3dqrjmixldrk" path="res://scenes/levels/level_3.tscn" id="2_c16ls"]
+[ext_resource type="PackedScene" uid="uid://c7demcc55e7k" path="res://scenes/levels/level_0.tscn" id="2_pw63i"]
+[ext_resource type="PackedScene" uid="uid://bwcp3vo8nm80s" path="res://scenes/levels/level_1.tscn" id="3_7ykc4"]
+[ext_resource type="PackedScene" uid="uid://dwe0312jcal4" path="res://scenes/levels/level_2.tscn" id="4_pu3yx"]
+[ext_resource type="PackedScene" uid="uid://dgdofrdro1kp2" path="res://scenes/levels/under_construction.tscn" id="6_c16ls"]
+[ext_resource type="PackedScene" uid="uid://u37w84wfbmno" path="res://scenes/ending_scene.tscn" id="7_c16ls"]
+[ext_resource type="PackedScene" uid="uid://612qm7bjeelv" path="res://scenes/pause_menu.tscn" id="8_18nlu"]
+[ext_resource type="AudioStream" uid="uid://df23qb4ichc5n" path="res://audio/music/main_intro.wav" id="9_c1pb6"]
+[ext_resource type="AudioStream" uid="uid://b1qhyi12e4g5x" path="res://audio/music/main_loop.wav" id="10_6wevv"]
+[ext_resource type="AudioStream" uid="uid://dk1yl7cj8s758" path="res://audio/music/under_construction.mp3" id="11_e1cbu"]
+
+[node name="MainScene" type="Node2D" node_paths=PackedStringArray("_intro", "_loop", "_under_construction")]
+script = ExtResource("1_w2twt")
+levels = Array[PackedScene]([ExtResource("2_pw63i"), ExtResource("3_7ykc4"), ExtResource("4_pu3yx"), ExtResource("2_c16ls"), ExtResource("6_c16ls")])
+_ending_scene = ExtResource("7_c16ls")
+_intro = NodePath("Intro")
+_loop = NodePath("Loop")
+_under_construction = NodePath("UnderConstruction")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.4, 2.25)
+
+[node name="PauseMenu" parent="." instance=ExtResource("8_18nlu")]
+process_mode = 3
+
+[node name="Intro" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_c1pb6")
+autoplay = true
+bus = &"Music"
+
+[node name="Loop" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_6wevv")
+bus = &"Music"
+parameters/looping = true
+
+[node name="UnderConstruction" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_e1cbu")

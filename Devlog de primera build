@@ -1,0 +1,20 @@
+Vaaaaale, esto realmente no es un ReadMe como tal, es una nota de desarrollo debido a un error con GitHub.
+
+Me ha costado un poco averiguar el problema, pero creo que está resuelto, básicamente, perdí la publicación original del juego con 0 contenido, así que esta build inicial ya tiene cosas hechas.
+
+El DevLog habría sido algo así:
+  -Added player
+    ·Alpha sprite that will get changed in a future update, hoping for Beta. Right now is 16x16px with no animations, just centered to one side so you can know were are you looking at.
+    ·Square CollisioShape2D. Wasn't sure if it was the best shape I could've picked, but I think it's going to work fine.
+    ·Is a RigidBody2D for future mechanics. I think that's the best option for how I want the game to be.
+  -Added escena_principal
+  -Added tileset
+    ·Alpha asset, will be changed like all other textures in future updates, hopefully all of them will change before the Beta comes out
+  -Added Nivel_1
+    ·Only as a test, nothing built
+  -Added bordes
+
+Notas para próxima update:
+  -Ordénate con los idiomas, me es mucho más cómodo escribir en español, aunque siempre es mejor ir a por el inglés, creo que haré los archivos in-game en inglés así como todo el texto y cosas como devlogs en español.
+  -JUNIPERDEV GAMEJAM WTHHHHH
+  -Encuentra una forma de que el jugador mida exactamente como los bloques, ahora mismo el jugador es ligeramente más pequeño por alguna razón y me es imposible hacerlos iguales.

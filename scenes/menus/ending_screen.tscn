@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://u37w84wfbmno"]
+
+[ext_resource type="Script" uid="uid://bghaey35nrrkl" path="res://scenes/menus/ending_screen.gd" id="1_kpoak"]
+[ext_resource type="PackedScene" uid="uid://vjd6xt1fpohd" path="res://scenes/menus/title_screen.tscn" id="2_ighji"]
+[ext_resource type="Theme" uid="uid://d3qso5yw6drip" path="res://visual/themes/title_screen_theme.tres" id="3_tvwvb"]
+[ext_resource type="StyleBox" uid="uid://ysilah71lpef" path="res://visual/themes/title_screen_button_normal.tres" id="4_vm3g7"]
+[ext_resource type="StyleBox" uid="uid://dd1mw22e4yjl3" path="res://visual/themes/title_screen_button_pressed.tres" id="5_1ffvt"]
+[ext_resource type="StyleBox" uid="uid://vbhy5u6o2uho" path="res://visual/themes/title_screen_button_hover.tres" id="6_o61ye"]
+[ext_resource type="StyleBox" uid="uid://bx68ihuqm7lyw" path="res://visual/themes/title_screen_button_focus.tres" id="7_0scsa"]
+[ext_resource type="FontFile" uid="uid://bgb2xaf423b4u" path="res://visual/fonts/retro_computer/retro_computer_personal_use.ttf" id="8_hdqte"]
+[ext_resource type="AudioStream" uid="uid://cqvnfpuyoj4i0" path="res://audio/music/ending_theme.mp3" id="9_mdypk"]
+[ext_resource type="Script" uid="uid://b3hmr33bpfqsx" path="res://scripts/menu_themes.gd" id="10_upht2"]
+
+[node name="EndingScreen" type="Control" unique_id=1537858029]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kpoak")
+titleScreen = ExtResource("2_ighji")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1119427043]
+layout_mode = 0
+offset_right = 1.0
+offset_bottom = 1.0
+scale = Vector2(1152, 648)
+color = Color(0, 1, 0.6484375, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=192056243]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -94.5
+offset_top = -110.0
+offset_right = 94.5
+offset_bottom = 242.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="TitleScreen" type="Button" parent="VBoxContainer" unique_id=349187264]
+layout_mode = 2
+theme = ExtResource("3_tvwvb")
+theme_override_styles/normal = ExtResource("4_vm3g7")
+theme_override_styles/pressed = ExtResource("5_1ffvt")
+theme_override_styles/hover = ExtResource("6_o61ye")
+theme_override_styles/focus = ExtResource("7_0scsa")
+text = "Title Screen
+"
+autowrap_trim_flags = 192
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=879612919]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -483.0
+offset_top = 12.0
+offset_right = 501.99976
+offset_bottom = 535.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=1949780120]
+layout_mode = 2
+theme = ExtResource("3_tvwvb")
+text = "Thanks for playing!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer2" unique_id=45507083]
+layout_mode = 2
+theme = ExtResource("3_tvwvb")
+theme_override_fonts/font = ExtResource("8_hdqte")
+theme_override_font_sizes/font_size = 24
+text = "That's all the content availble for now
+in the game.  There is more content and
+updates yet to come.
+You can go to the itch.io page of the game
+and check for news or new content, if you
+want to, you can even make a donation to
+support this one and future proyects.
+All this game's code is public and accesible
+on our Github page.
+Thank you for playing our game, we really hope
+you enjoyed your experience. See you soon,
+-Plasma Games"
+horizontal_alignment = 1
+
+[node name="EndingTheme" type="AudioStreamPlayer2D" parent="." unique_id=352156929]
+position = Vector2(93, 118)
+stream = ExtResource("9_mdypk")
+pitch_scale = 0.8
+script = ExtResource("10_upht2")
+
+[connection signal="button_up" from="VBoxContainer/TitleScreen" to="." method="_on_quit_button_up"]

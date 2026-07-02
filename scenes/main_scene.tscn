@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cbwkgt6imvh8n"]
+
+[ext_resource type="Script" uid="uid://p7wo7acarats" path="res://scenes/main_scene.gd" id="1_w2twt"]
+[ext_resource type="PackedScene" uid="uid://612qm7bjeelv" path="res://scenes/menus/pause_menu.tscn" id="8_18nlu"]
+[ext_resource type="AudioStream" uid="uid://df23qb4ichc5n" path="res://audio/music/main_intro.wav" id="9_c1pb6"]
+[ext_resource type="AudioStream" uid="uid://b1qhyi12e4g5x" path="res://audio/music/main_loop.wav" id="10_6wevv"]
+[ext_resource type="AudioStream" uid="uid://dk1yl7cj8s758" path="res://audio/music/under_construction.mp3" id="11_e1cbu"]
+
+[node name="MainScene" type="Node2D" unique_id=1120140454]
+script = ExtResource("1_w2twt")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1708463380]
+zoom = Vector2(2.4, 2.25)
+
+[node name="PauseMenu" parent="." unique_id=1529574896 instance=ExtResource("8_18nlu")]
+process_mode = 3
+
+[node name="Intro" type="AudioStreamPlayer2D" parent="." unique_id=775847518]
+process_mode = 3
+stream = ExtResource("9_c1pb6")
+autoplay = true
+bus = &"Music"
+
+[node name="Loop" type="AudioStreamPlayer2D" parent="." unique_id=346735166]
+process_mode = 3
+stream = ExtResource("10_6wevv")
+bus = &"Music"
+parameters/looping = true
+
+[node name="UnderConstruction" type="AudioStreamPlayer2D" parent="." unique_id=813236402]
+process_mode = 3
+stream = ExtResource("11_e1cbu")
+volume_db = 10.0

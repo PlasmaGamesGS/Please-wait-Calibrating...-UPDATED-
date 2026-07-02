@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbwkgt6imvh8n"]
+
+[ext_resource type="Script" uid="uid://p7wo7acarats" path="res://scenes/main_scene.gd" id="1_w2twt"]
+[ext_resource type="PackedScene" uid="uid://c7demcc55e7k" path="res://scenes/levels/level_0.tscn" id="2_pw63i"]
+[ext_resource type="PackedScene" uid="uid://bwcp3vo8nm80s" path="res://scenes/levels/level_1.tscn" id="3_7ykc4"]
+[ext_resource type="PackedScene" uid="uid://dwe0312jcal4" path="res://scenes/levels/level_2.tscn" id="4_pu3yx"]
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource("1_w2twt")
+levels = Array[PackedScene]([ExtResource("2_pw63i"), ExtResource("4_pu3yx"), ExtResource("3_7ykc4")])
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.4, 2.25)

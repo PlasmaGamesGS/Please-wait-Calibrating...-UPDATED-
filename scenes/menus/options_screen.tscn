@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://dvll54kwow61m"]
+
+[ext_resource type="Theme" uid="uid://d3qso5yw6drip" path="res://visual/themes/title_screen_theme.tres" id="3_mykea"]
+[ext_resource type="StyleBox" uid="uid://ysilah71lpef" path="res://visual/themes/title_screen_button_normal.tres" id="4_kph5i"]
+[ext_resource type="StyleBox" uid="uid://dd1mw22e4yjl3" path="res://visual/themes/title_screen_button_pressed.tres" id="5_1mbe2"]
+[ext_resource type="StyleBox" uid="uid://vbhy5u6o2uho" path="res://visual/themes/title_screen_button_hover.tres" id="6_nkyf2"]
+[ext_resource type="StyleBox" uid="uid://bx68ihuqm7lyw" path="res://visual/themes/title_screen_button_focus.tres" id="7_77nb6"]
+[ext_resource type="AudioStream" uid="uid://bm3lrkh7op6r5" path="res://audio/music/title_theme.mp3" id="8_ffyp1"]
+[ext_resource type="Script" uid="uid://b3hmr33bpfqsx" path="res://scripts/menu_themes.gd" id="9_yxth3"]
+
+[node name="OptionsScreen" type="Control" unique_id=1803619200]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2073392845]
+layout_mode = 0
+offset_right = 1.0
+offset_bottom = 1.0
+scale = Vector2(1152, 648)
+color = Color(0.5, 0.95000005, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=576517156]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -58.0
+offset_right = 219.0
+offset_bottom = 294.0
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Volume" type="Button" parent="VBoxContainer" unique_id=427691961]
+layout_mode = 2
+theme = ExtResource("3_mykea")
+theme_override_styles/normal = ExtResource("4_kph5i")
+theme_override_styles/pressed = ExtResource("5_1mbe2")
+theme_override_styles/hover = ExtResource("6_nkyf2")
+theme_override_styles/focus = ExtResource("7_77nb6")
+text = "Volume"
+
+[node name="Resolution" type="Button" parent="VBoxContainer" unique_id=996637918]
+layout_mode = 2
+theme = ExtResource("3_mykea")
+theme_override_styles/normal = ExtResource("4_kph5i")
+theme_override_styles/pressed = ExtResource("5_1mbe2")
+theme_override_styles/hover = ExtResource("6_nkyf2")
+theme_override_styles/focus = ExtResource("7_77nb6")
+text = "Resolution"
+
+[node name="Back" type="Button" parent="VBoxContainer" unique_id=1126209512]
+layout_mode = 2
+theme = ExtResource("3_mykea")
+theme_override_styles/normal = ExtResource("4_kph5i")
+theme_override_styles/pressed = ExtResource("5_1mbe2")
+theme_override_styles/hover = ExtResource("6_nkyf2")
+theme_override_styles/focus = ExtResource("7_77nb6")
+text = "Back"
+autowrap_trim_flags = 192
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1671395099]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1016.0
+offset_top = 30.0
+offset_right = -31.0
+offset_bottom = 300.0
+grow_horizontal = 0
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=762960706]
+layout_mode = 2
+theme = ExtResource("3_mykea")
+text = "Options"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="OptionsTheme" type="AudioStreamPlayer2D" parent="." unique_id=725490295]
+stream = ExtResource("8_ffyp1")
+pitch_scale = 1.2
+script = ExtResource("9_yxth3")

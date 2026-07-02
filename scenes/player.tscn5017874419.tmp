@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1bern1ybm1xl"]
+
+[ext_resource type="Script" uid="uid://isix7d8tu3y6" path="res://scenes/player.gd" id="1_g2els"]
+[ext_resource type="SpriteFrames" uid="uid://dcrber2pv0i8a" path="res://assets/sprites/player/sprite_frames.tres" id="2_g2els"]
+[ext_resource type="TileSet" uid="uid://bb21qgbki857y" path="res://assets/tile_sets/alphatileset.tres" id="3_qhqgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kkt6c"]
+size = Vector2(11.476191, 30.612244)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
+radius = 6.0
+height = 28.0
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("animation", "area_2d")]
+collision_layer = 4
+script = ExtResource("1_g2els")
+animation = NodePath("AnimatedSprite2D")
+area_2d = NodePath("Area2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_g2els")
+animation = &"run"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.024999402, 1.0000004)
+scale = Vector2(1.05, 0.98)
+shape = SubResource("RectangleShape2D_kkt6c")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_g2els")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = ExtResource("3_qhqgy")

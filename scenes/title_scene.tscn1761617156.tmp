@@ -1,0 +1,104 @@
+[gd_scene load_steps=13 format=3 uid="uid://vjd6xt1fpohd"]
+
+[ext_resource type="Theme" uid="uid://d3qso5yw6drip" path="res://themes/title_screen_theme.tres" id="1_7rdyk"]
+[ext_resource type="StyleBox" uid="uid://ysilah71lpef" path="res://themes/title_screen_button_normal.tres" id="2_ofksa"]
+[ext_resource type="StyleBox" uid="uid://dd1mw22e4yjl3" path="res://themes/title_screen_button_pressed.tres" id="3_1ot34"]
+[ext_resource type="StyleBox" uid="uid://vbhy5u6o2uho" path="res://themes/title_screen_button_hover.tres" id="4_lqobm"]
+[ext_resource type="StyleBox" uid="uid://bx68ihuqm7lyw" path="res://themes/title_screen_button_focus.tres" id="5_6ppm8"]
+[ext_resource type="Script" uid="uid://mpvjkup5fwmo" path="res://scenes/play.gd" id="6_bre4b"]
+[ext_resource type="PackedScene" uid="uid://cbwkgt6imvh8n" path="res://scenes/main_scene.tscn" id="7_ur11i"]
+[ext_resource type="Script" uid="uid://rkfuwdefuie3" path="res://scenes/options.gd" id="8_6ppm8"]
+[ext_resource type="Script" uid="uid://c5h21v08sqsn" path="res://scenes/exit_button.gd" id="8_u3gtk"]
+[ext_resource type="AudioStream" uid="uid://bm3lrkh7op6r5" path="res://audio/music/title_theme.mp3" id="9_1ot34"]
+[ext_resource type="PackedScene" uid="uid://cihv27okb2r7g" path="res://scenes/options_scene.tscn" id="9_bre4b"]
+[ext_resource type="Script" uid="uid://b3hmr33bpfqsx" path="res://scenes/menu_themes.gd" id="10_1ot34"]
+
+[node name="TitleScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1.0
+offset_bottom = 1.0
+scale = Vector2(1152, 648)
+color = Color(0, 1, 0.6484375, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -58.0
+offset_right = 219.0
+offset_bottom = 294.0
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_7rdyk")
+theme_override_styles/normal = ExtResource("2_ofksa")
+theme_override_styles/pressed = ExtResource("3_1ot34")
+theme_override_styles/hover = ExtResource("4_lqobm")
+theme_override_styles/focus = ExtResource("5_6ppm8")
+text = "Play"
+script = ExtResource("6_bre4b")
+main_scene = ExtResource("7_ur11i")
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_7rdyk")
+theme_override_styles/normal = ExtResource("2_ofksa")
+theme_override_styles/pressed = ExtResource("3_1ot34")
+theme_override_styles/hover = ExtResource("4_lqobm")
+theme_override_styles/focus = ExtResource("5_6ppm8")
+text = "Options"
+script = ExtResource("8_6ppm8")
+options_scene = ExtResource("9_bre4b")
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_7rdyk")
+theme_override_styles/normal = ExtResource("2_ofksa")
+theme_override_styles/pressed = ExtResource("3_1ot34")
+theme_override_styles/hover = ExtResource("4_lqobm")
+theme_override_styles/focus = ExtResource("5_6ppm8")
+text = "Quit"
+autowrap_trim_flags = 192
+script = ExtResource("8_u3gtk")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1016.0
+offset_top = 30.0
+offset_right = -31.0
+offset_bottom = 300.0
+grow_horizontal = 0
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("1_7rdyk")
+text = "Please, wait,"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("1_7rdyk")
+theme_override_font_sizes/font_size = 180
+text = "Calibrating..."
+horizontal_alignment = 2
+
+[node name="TitleTheme" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_1ot34")
+pitch_scale = 1.2
+script = ExtResource("10_1ot34")
