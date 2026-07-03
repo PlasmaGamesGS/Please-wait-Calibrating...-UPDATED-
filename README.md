@@ -5,9 +5,10 @@ Currently, Please, wait, Calibrating... is in a really early Alpha state and lot
 If you want to know more about the proyect, us, or anything else, you should check out [Itch.io page](https://plasmagamez.itch.io/please-wait-calibrating), were you'll find all of our platforms (GitHub, YouTube...) and also more of our proyects, as well as news and updates for our existing content, or future ones! (ahem, you can even donate if you want...)
 
 {DOWNLOAD GUIDELINES}
-To be able to play the game you need to download the .zip folder below, wich contains the aplication (.exe) file and the PCK (.pck) file.
-Then, to run it, you need to open de application file (it is recommended to first extract the .zip, however, it's not required) like you would normally do with any other program.
-That's all you'll need to actually play the game, but you need to make sure you have both files inside the same folder (compressed or not) when you run the game, else, it'll not work, because the PCK file is needed for the program to start.
+When you download the game you'll get two files. The .exe file ("Please, wait, Calibrating....exe") and a source code  file ("Please-wait-Calibrating...-UPDATED--Alpha.zip"). If you just want to play the game, you can execute the .exe application and play the game from that file. However, if you open the sorce code file, you'll find all of the game internal files such as the assets used in it, its code, its scenes, etc. You are free to use this files as you wish, taking in account the following rules:
+	1. If you release publicly a modified version of the game or use any file within it for another existing project (asides copying code lines, I have no problem with a user taking some lines from my code to help their game as long as they don't put entire scripts into their game files), you must write somewhere visible in your project page (such as Itch.io, GitHub...) the following text:
+		"This project is a modified version or has been made partially made using files from the game "Please, wait, Calibrating..." by Plasma Games" and add a link to our Github and Itch.io pages 
+	2. The user is not allow to use any of this game's files for commercial benefit, meaning anything you do with our source code mustn't be priced in any way.
 {DOWNLOAD GUIDELINES}
 
 {CONTROLS}

@@ -31,7 +31,7 @@ buses/default_bus_layout="res://audio/default_bus_layout.tres"
 
 [autoload]
 
-GlobalController="*res://scripts/global_controller.gd"
+VersionDetails="*res://scripts/version_details.gd"
 
 [display]
 
