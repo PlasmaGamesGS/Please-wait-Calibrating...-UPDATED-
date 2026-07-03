@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://612qm7bjeelv"]
 
-[ext_resource type="Theme" uid="uid://d3qso5yw6drip" path="res://visual/themes/title_screen_theme.tres" id="1_88e76"]
-[ext_resource type="Script" uid="uid://m8xbk6hp7wbo" path="res://scenes/menus/pause_menu.gd" id="1_knqa7"]
-[ext_resource type="StyleBox" uid="uid://ysilah71lpef" path="res://visual/themes/title_screen_button_normal.tres" id="2_knqa7"]
-[ext_resource type="StyleBox" uid="uid://dd1mw22e4yjl3" path="res://visual/themes/title_screen_button_pressed.tres" id="3_71k7c"]
-[ext_resource type="StyleBox" uid="uid://vbhy5u6o2uho" path="res://visual/themes/title_screen_button_hover.tres" id="4_cmnsq"]
-[ext_resource type="StyleBox" uid="uid://bx68ihuqm7lyw" path="res://visual/themes/title_screen_button_focus.tres" id="5_ofnjo"]
+[ext_resource type="Theme" uid="uid://d3qso5yw6drip" path="res://assets/visuals/themes/title_screen_theme.tres" id="1_88e76"]
+[ext_resource type="Script" uid="uid://m8xbk6hp7wbo" path="res://scenes/menus/scripts/pause_menu.gd" id="1_knqa7"]
+[ext_resource type="StyleBox" uid="uid://ysilah71lpef" path="res://assets/visuals/themes/title_screen_button_normal.tres" id="2_knqa7"]
+[ext_resource type="StyleBox" uid="uid://dd1mw22e4yjl3" path="res://assets/visuals/themes/title_screen_button_pressed.tres" id="3_71k7c"]
+[ext_resource type="StyleBox" uid="uid://vbhy5u6o2uho" path="res://assets/visuals/themes/title_screen_button_hover.tres" id="4_cmnsq"]
+[ext_resource type="StyleBox" uid="uid://bx68ihuqm7lyw" path="res://assets/visuals/themes/title_screen_button_focus.tres" id="5_ofnjo"]
 
 [node name="PauseMenu" type="Control" unique_id=894294058]
 layout_mode = 3

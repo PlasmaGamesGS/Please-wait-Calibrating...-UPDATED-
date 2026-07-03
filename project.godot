@@ -27,11 +27,11 @@ boot_splash/minimum_display_time=5000
 
 [audio]
 
-buses/default_bus_layout="res://audio/default_bus_layout.tres"
+buses/default_bus_layout="res://assets/audio/default_bus_layout.tres"
 
 [autoload]
 
-VersionDetails="*res://scripts/version_details.gd"
+VersionDetails="*res://globals/version_details.gd"
 
 [display]
 

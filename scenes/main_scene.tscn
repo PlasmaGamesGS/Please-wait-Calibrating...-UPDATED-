@@ -1,19 +1,27 @@
 [gd_scene format=3 uid="uid://cbwkgt6imvh8n"]
 
-[ext_resource type="Script" uid="uid://p7wo7acarats" path="res://scenes/main_scene.gd" id="1_w2twt"]
-[ext_resource type="PackedScene" uid="uid://612qm7bjeelv" path="res://scenes/menus/pause_menu.tscn" id="8_18nlu"]
-[ext_resource type="AudioStream" uid="uid://df23qb4ichc5n" path="res://audio/music/main_intro.wav" id="9_c1pb6"]
-[ext_resource type="AudioStream" uid="uid://b1qhyi12e4g5x" path="res://audio/music/main_loop.wav" id="10_6wevv"]
-[ext_resource type="AudioStream" uid="uid://dk1yl7cj8s758" path="res://audio/music/under_construction.mp3" id="11_e1cbu"]
+[ext_resource type="Script" uid="uid://p7wo7acarats" path="res://scenes/scripts/main_scene.gd" id="1_w2twt"]
+[ext_resource type="PackedScene" uid="uid://c7demcc55e7k" path="res://scenes/levels/floor1/level_0.tscn" id="2_e1cbu"]
+[ext_resource type="PackedScene" uid="uid://bwcp3vo8nm80s" path="res://scenes/levels/floor1/level_1.tscn" id="3_mngbo"]
+[ext_resource type="PackedScene" uid="uid://dwe0312jcal4" path="res://scenes/levels/floor1/level_2.tscn" id="4_4w45t"]
+[ext_resource type="PackedScene" uid="uid://d3dqrjmixldrk" path="res://scenes/levels/floor1/level_3.tscn" id="5_r6p65"]
+[ext_resource type="PackedScene" uid="uid://v5fabm00vbti" path="res://scenes/levels/floor1/under_construction.tscn" id="6_mngbo"]
+[ext_resource type="PackedScene" uid="uid://u37w84wfbmno" path="res://scenes/menus/ending_screen.tscn" id="7_01n6w"]
+[ext_resource type="PackedScene" uid="uid://tdmf0vfxatsh" path="res://scenes/levels/floor1/secret_level_1.tscn" id="7_4w45t"]
+[ext_resource type="AudioStream" uid="uid://df23qb4ichc5n" path="res://assets/audio/music/main_intro.wav" id="9_c1pb6"]
+[ext_resource type="AudioStream" uid="uid://b1qhyi12e4g5x" path="res://assets/audio/music/main_loop.wav" id="10_6wevv"]
+[ext_resource type="AudioStream" uid="uid://dk1yl7cj8s758" path="res://assets/audio/music/under_construction.mp3" id="11_e1cbu"]
 
-[node name="MainScene" type="Node2D" unique_id=1120140454]
+[node name="MainScene" type="Node2D" unique_id=1120140454 node_paths=PackedStringArray("_intro", "_loop", "_under_construction")]
 script = ExtResource("1_w2twt")
+levels = Array[PackedScene]([ExtResource("2_e1cbu"), ExtResource("3_mngbo"), ExtResource("4_4w45t"), ExtResource("5_r6p65"), ExtResource("6_mngbo"), ExtResource("7_4w45t")])
+_ending_scene = ExtResource("7_01n6w")
+_intro = NodePath("Intro")
+_loop = NodePath("Loop")
+_under_construction = NodePath("UnderConstruction")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1708463380]
 zoom = Vector2(2.4, 2.25)
-
-[node name="PauseMenu" parent="." unique_id=1529574896 instance=ExtResource("8_18nlu")]
-process_mode = 3
 
 [node name="Intro" type="AudioStreamPlayer2D" parent="." unique_id=775847518]
 process_mode = 3

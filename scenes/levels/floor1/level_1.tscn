@@ -15,7 +15,7 @@ tile_map_data = PackedByteArray("AAD0//r/AAADAAEAAAD0//v/AAADAAEAAAD0//z/AAADAAE
 tile_set = ExtResource("1_6761a")
 
 [node name="Level" type="TileMapLayer" parent="." unique_id=647101386]
-tile_map_data = PackedByteArray("AAAMAAMAAAAAAAAAAAAMAAIAAAAAAAAAAAD9/wYAAAABAAAAAAD+/wYAAAABAAAAAAD//wYAAAABAAAAAAAAAAYAAAABAAAAAAAMAAQAAAAAAAAAAAD6/wYAAAABAAAAAAD0//r/AAAEAAIAAAD1//r/AAAEAAIAAAD2//r/AAAEAAIAAAD3//r/AAAEAAIAAAD4//r/AAAEAAIAAAD5//r/AAAEAAIAAAD6//r/AAAEAAIAAAD7//r/AAAEAAIAAAD8//r/AAAEAAIAAAD9//r/AAAEAAIAAAD+//r/AAAEAAIAAAD///r/AAAEAAIAAAAAAPr/AAAEAAIAAAABAPr/AAAEAAIAAAACAPr/AAAEAAIAAAADAPr/AAAEAAIAAAAEAPr/AAAEAAIAAAAFAPr/AAAEAAIAAAAGAPr/AAAEAAIAAAAHAPr/AAAEAAIAAAAIAPr/AAAEAAIAAAAJAPr/AAAEAAIAAAAKAPr/AAAEAAIAAAALAPr/AAAEAAIAAAADAPv/AAADAAMAAAAGAP3/AAAAAAIAAAAHAP3/AAAAAAIAAAAIAP3/AAAAAAIAAAD+//3/AAACAAMAAAD///3/AAACAAMAAAAAAP3/AAACAAMAAAAEAPv/AAADAAMAAAA=")
+tile_map_data = PackedByteArray("AAAMAAMAAAAAAAAAAAAMAAIAAAAAAAAAAAD9/wYAAAABAAAAAAD+/wYAAAABAAAAAAD//wYAAAABAAAAAAAAAAYAAAABAAAAAAAMAAQAAAAAAAAAAAD6/wYAAAABAAAAAAD0//r/AAAEAAIAAAD1//r/AAAEAAIAAAD2//r/AAAEAAIAAAD3//r/AAAEAAIAAAD4//r/AAAEAAIAAAD5//r/AAAEAAIAAAD6//r/AAAEAAIAAAD7//r/AAAEAAIAAAD8//r/AAAEAAIAAAD9//r/AAAEAAIAAAD+//r/AAAEAAIAAAD///r/AAAEAAIAAAAAAPr/AAAEAAIAAAABAPr/AAAEAAIAAAACAPr/AAAEAAIAAAADAPr/AAAEAAIAAAAEAPr/AAAEAAIAAAAFAPr/AAAEAAIAAAAGAPr/AAAEAAIAAAAHAPr/AAAEAAIAAAAIAPr/AAAEAAIAAAAJAPr/AAAEAAIAAAAKAPr/AAAEAAIAAAALAPr/AAAEAAIAAAADAPv/AAADAAMAAAAGAP3/AAAAAAIAAAAHAP3/AAAAAAIAAAAIAP3/AAAAAAIAAAD+//3/AAACAAMAAAD///3/AAACAAMAAAAAAP3/AAACAAMAAAAEAPv/AAADAAMAAAD+/wMAAAAAAAAAAAD+/wQAAAAAAAAAAAD+/wUAAAAAAAAAAAD+/wIAAAADAAMAAAD8/wIAAAADAAMAAAA=")
 tile_set = ExtResource("1_6761a")
 
 [node name="Border" parent="." unique_id=113669537 instance=ExtResource("2_sk5k4")]
@@ -27,8 +27,8 @@ position = Vector2(168, 80)
 position = Vector2(-152, 80)
 
 [node name="GravityModifier" parent="." unique_id=1182248526 instance=ExtResource("6_sk5k4")]
-position = Vector2(-24, 40.999992)
-scale = Vector2(2.329543, 4.2302394)
+position = Vector2(-8, 18)
+scale = Vector2(2.329543, 2.2302399)
 
 [node name="UnidirectionalTiles" type="Node" parent="." unique_id=1165656267]
 
@@ -50,6 +50,14 @@ player = NodePath("../../Player")
 
 [node name="UnidirectionalTile5" parent="UnidirectionalTiles" unique_id=1461932302 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
 position = Vector2(120, 12)
+player = NodePath("../../Player")
+
+[node name="UnidirectionalTile15" parent="UnidirectionalTiles" unique_id=865859534 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+position = Vector2(136, 12)
+player = NodePath("../../Player")
+
+[node name="UnidirectionalTile14" parent="UnidirectionalTiles" unique_id=25755465 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+position = Vector2(104, 12)
 player = NodePath("../../Player")
 
 [node name="UnidirectionalTile6" parent="UnidirectionalTiles" unique_id=2109946939 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
@@ -76,8 +84,16 @@ player = NodePath("../../Player")
 position = Vector2(-72, 76)
 player = NodePath("../../Player")
 
+[node name="UnidirectionalTile17" parent="UnidirectionalTiles" unique_id=536530090 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+position = Vector2(-56, 76)
+player = NodePath("../../Player")
+
 [node name="UnidirectionalTile11" parent="UnidirectionalTiles" unique_id=1335178043 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
 position = Vector2(-56, 44)
+player = NodePath("../../Player")
+
+[node name="UnidirectionalTile16" parent="UnidirectionalTiles" unique_id=2105151523 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+position = Vector2(-72, 44)
 player = NodePath("../../Player")
 
 [node name="UnidirectionalTile12" parent="UnidirectionalTiles" unique_id=1522286621 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]

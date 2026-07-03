@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://dvll54kwow61m"]
 
-[ext_resource type="Theme" uid="uid://d3qso5yw6drip" path="res://visual/themes/title_screen_theme.tres" id="3_mykea"]
-[ext_resource type="StyleBox" uid="uid://ysilah71lpef" path="res://visual/themes/title_screen_button_normal.tres" id="4_kph5i"]
-[ext_resource type="StyleBox" uid="uid://dd1mw22e4yjl3" path="res://visual/themes/title_screen_button_pressed.tres" id="5_1mbe2"]
-[ext_resource type="StyleBox" uid="uid://vbhy5u6o2uho" path="res://visual/themes/title_screen_button_hover.tres" id="6_nkyf2"]
-[ext_resource type="StyleBox" uid="uid://bx68ihuqm7lyw" path="res://visual/themes/title_screen_button_focus.tres" id="7_77nb6"]
-[ext_resource type="AudioStream" uid="uid://bm3lrkh7op6r5" path="res://audio/music/title_theme.mp3" id="8_ffyp1"]
-[ext_resource type="Script" uid="uid://b3hmr33bpfqsx" path="res://scripts/menu_themes.gd" id="9_yxth3"]
+[ext_resource type="Theme" uid="uid://d3qso5yw6drip" path="res://assets/visuals/themes/title_screen_theme.tres" id="3_mykea"]
+[ext_resource type="StyleBox" uid="uid://ysilah71lpef" path="res://assets/visuals/themes/title_screen_button_normal.tres" id="4_kph5i"]
+[ext_resource type="StyleBox" uid="uid://dd1mw22e4yjl3" path="res://assets/visuals/themes/title_screen_button_pressed.tres" id="5_1mbe2"]
+[ext_resource type="StyleBox" uid="uid://vbhy5u6o2uho" path="res://assets/visuals/themes/title_screen_button_hover.tres" id="6_nkyf2"]
+[ext_resource type="StyleBox" uid="uid://bx68ihuqm7lyw" path="res://assets/visuals/themes/title_screen_button_focus.tres" id="7_77nb6"]
+[ext_resource type="AudioStream" uid="uid://bm3lrkh7op6r5" path="res://assets/audio/music/title_theme.mp3" id="8_ffyp1"]
+[ext_resource type="Script" uid="uid://b3hmr33bpfqsx" path="res://scenes/menus/scripts/menu_themes.gd" id="9_yxth3"]
 
 [node name="OptionsScreen" type="Control" unique_id=1803619200]
 layout_mode = 3

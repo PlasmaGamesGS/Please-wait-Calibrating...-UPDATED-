@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://vcr0q0taymbt"]
 
 [ext_resource type="Texture2D" uid="uid://bg83yav8gkuj0" path="res://assets/tile_sets/alpha_tileset_floor1.png" id="1_syxuu"]
-[ext_resource type="Script" uid="uid://dley4c56s777v" path="res://scenes/propts/exit_door.gd" id="1_yk4m6"]
-[ext_resource type="Texture2D" uid="uid://cqpoxsjog1ylm" path="res://assets/sprites/exit.png" id="3_3kcqx"]
+[ext_resource type="Script" uid="uid://dley4c56s777v" path="res://scenes/propts/scripts/exit_door.gd" id="1_yk4m6"]
+[ext_resource type="Texture2D" uid="uid://cqpoxsjog1ylm" path="res://assets/sprites/propts/exit.png" id="3_3kcqx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hy0h8"]
 size = Vector2(16, 32)
