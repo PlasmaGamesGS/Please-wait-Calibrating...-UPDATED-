@@ -49,7 +49,8 @@ func _physics_process(delta):
 
 	#gravedad
 	if stair:
-		gravity = Vector2(0, 0)
+		if velocity.y == 0:
+			gravity = Vector2(0, 0)
 	elif alt_gravity:
 		gravity = -get_gravity()
 	else:
@@ -63,20 +64,24 @@ func _physics_process(delta):
 	
 	#salto
 	if Input.is_action_pressed("jump"):
-		if alt_gravity == false && is_on_floor() && !stair:
-			animation.play("jump")
+		if alt_gravity == false && is_on_floor():
+			stair = false
 			velocity.y = _jump_speed
-			
-		elif alt_gravity && is_on_ceiling():
 			animation.play("jump")
+		elif alt_gravity && is_on_ceiling():
+			stair = false
 			velocity.y = -_jump_speed
+			animation.play("jump")
+		
+
 
 	#escalar
 	if stair:
-		if Input.is_action_pressed("up"):
-			position.y -= 2
-		elif Input.is_action_pressed("down"):
-			position.y += 2
+		if velocity.y == 0:
+			if Input.is_action_pressed("up"):
+				position.y -= 2
+			elif Input.is_action_pressed("down"):
+				position.y += 2
 
 	move_and_slide()
 
