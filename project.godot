@@ -18,7 +18,7 @@ config/name="Please, wait, Calibrating..."
 config/description="Wait a moment while we reconnect you..."
 config/version="0.0.1"
 run/main_scene="uid://vjd6xt1fpohd"
-config/features=PackedStringArray("4.6", "GL Compatibility")
+config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/use_filter=false
 boot_splash/image="uid://dhwnl0mexuwqc"
@@ -27,7 +27,7 @@ boot_splash/minimum_display_time=5000
 
 [audio]
 
-buses/default_bus_layout="res://assets/audio/default_bus_layout.tres"
+buses/default_bus_layout=""
 
 [autoload]
 
@@ -38,6 +38,10 @@ VersionDetails="*res://globals/version_details.gd"
 window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[global_group]
+
+characters=""
 
 [input]
 

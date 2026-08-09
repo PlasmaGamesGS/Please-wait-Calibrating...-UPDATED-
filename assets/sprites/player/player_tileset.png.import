@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ecqmgqajmai0"
-path="res://.godot/imported/gate.png-911bf6be97b92624ecedc7344d866f8d.ctex"
+uid="uid://dyjig5kfn6p4a"
+path="res://.godot/imported/player_tileset.png-ae218e3242a43e1e81ef1284b419e452.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/propts/gate.png"
-dest_files=["res://.godot/imported/gate.png-911bf6be97b92624ecedc7344d866f8d.ctex"]
+source_file="res://assets/sprites/player/player_tileset.png"
+dest_files=["res://.godot/imported/player_tileset.png-ae218e3242a43e1e81ef1284b419e452.ctex"]
 
 [params]
 

@@ -6,9 +6,9 @@ extends StaticBody2D
 
 func _process(_delta: float) -> void:
 	if player.alt_gravity:
-		scale.y = -1
+		collision.scale.y = -1
 	else:
-		scale.y = 1
+		collision.scale.y = 1
 	
 	if Input.is_action_just_pressed("down"):
 		collision.disabled = true

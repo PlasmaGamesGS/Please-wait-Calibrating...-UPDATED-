@@ -1,7 +1,6 @@
 extends Node2D
 
 @export var levels: Array[PackedScene]
-@export var _ending_scene: PackedScene
 @export var _intro: AudioStreamPlayer2D
 @export var _loop: AudioStreamPlayer2D
 @export var _under_construction: AudioStreamPlayer2D
@@ -45,7 +44,7 @@ func next_level():
 			_loop.stop()
 			_under_construction.play()
 		if _current_level == 4:
-			get_tree().change_scene_to_packed.call_deferred(_ending_scene)
+			get_tree().change_scene_to_file.call_deferred("res://scenes/menus/ending_screen.tscn")
 		else:
 			_current_level += 1
 			_restart_level()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ecqmgqajmai0"
-path="res://.godot/imported/gate.png-911bf6be97b92624ecedc7344d866f8d.ctex"
+uid="uid://baeet5r5qeb3u"
+path="res://.godot/imported/error_gravity.png-044e974f092c8c3948877a499d36be44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/propts/gate.png"
-dest_files=["res://.godot/imported/gate.png-911bf6be97b92624ecedc7344d866f8d.ctex"]
+source_file="res://assets/sprites/icons/errors/error_gravity.png"
+dest_files=["res://.godot/imported/error_gravity.png-044e974f092c8c3948877a499d36be44.ctex"]
 
 [params]
 

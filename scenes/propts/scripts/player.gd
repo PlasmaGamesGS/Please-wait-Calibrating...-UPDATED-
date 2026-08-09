@@ -12,6 +12,7 @@ var _alt_size: bool
 var stair: bool
 var _size: Vector2 = Vector2(1, 1)
 var _new_size: int = 3
+var opening: bool
 
 @export var animation: AnimatedSprite2D
 @export var area_2d: Area2D
@@ -20,7 +21,6 @@ var _new_size: int = 3
 func _ready():
 	scale = _size
 	position = EnDoorPosition.position
-	add_to_group("characters")
 	area_2d.body_entered.connect(_damaged)
 
 
@@ -96,7 +96,7 @@ func _damaged(_body: Node2D) -> void:
 	player_died.emit()
 
 
-
+#modificador de gravedad
 func _mod_gravity():
 	for i in 2:
 		animation.modulate = Color(1.0, 0.492, 0.0, 1.0)
@@ -108,7 +108,7 @@ func _mod_gravity():
 	else:
 		alt_gravity = false
 
-
+#shhhh irrelevant
 func _mod_size():
 	for i in 2:
 		if !_alt_size:

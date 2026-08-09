@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://vjd6xt1fpohd"]
 
-[ext_resource type="Script" uid="uid://da4otwkduuutj" path="res://scenes/menus/scripts/title_screen.gd" id="1_gquoy"]
-[ext_resource type="PackedScene" uid="uid://cbwkgt6imvh8n" path="res://scenes/main_scene.tscn" id="2_4tc24"]
+[ext_resource type="Script" uid="uid://da4otwkduuutj" path="res://scenes/menus/scripts/title_screen.gd" id="1_4tc24"]
+[ext_resource type="PackedScene" uid="uid://cbwkgt6imvh8n" path="res://scenes/main_scene.tscn" id="2_gquoy"]
+[ext_resource type="PackedScene" uid="uid://dvll54kwow61m" path="res://scenes/menus/options_screen.tscn" id="3_4tc24"]
 [ext_resource type="Theme" uid="uid://d3qso5yw6drip" path="res://assets/visuals/themes/title_screen_theme.tres" id="3_o5a1b"]
 [ext_resource type="StyleBox" uid="uid://ysilah71lpef" path="res://assets/visuals/themes/title_screen_button_normal.tres" id="4_mvo1e"]
 [ext_resource type="StyleBox" uid="uid://dd1mw22e4yjl3" path="res://assets/visuals/themes/title_screen_button_pressed.tres" id="5_gfg51"]
@@ -19,8 +20,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_gquoy")
-main_scene = ExtResource("2_4tc24")
+script = ExtResource("1_4tc24")
+main_scene = ExtResource("2_gquoy")
+options_screen = ExtResource("3_4tc24")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2073392845]
 layout_mode = 0
@@ -51,7 +53,6 @@ theme_override_styles/focus = ExtResource("7_seji6")
 text = "Play"
 
 [node name="Options" type="Button" parent="Buttons" unique_id=996637918]
-visible = false
 layout_mode = 2
 theme = ExtResource("3_o5a1b")
 theme_override_styles/normal = ExtResource("4_mvo1e")

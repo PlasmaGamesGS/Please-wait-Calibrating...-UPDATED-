@@ -1,19 +1,17 @@
 [gd_scene format=3 uid="uid://cifs4vgj1m2u4"]
 
-[ext_resource type="Texture2D" uid="uid://bg83yav8gkuj0" path="res://assets/tile_sets/alpha_tileset_floor1.png" id="1_xk8ex"]
+[ext_resource type="Texture2D" uid="uid://dsg7uj116vl0b" path="res://assets/sprites/propts/entrance_door.png" id="1_7ycun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hy0h8"]
 size = Vector2(16, 32)
 
-[node name="EntranceDoor" type="Node2D"]
+[node name="EntranceDoor" type="Node2D" unique_id=1171911781]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1, 2)
-texture = ExtResource("1_xk8ex")
-region_enabled = true
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=394127359]
+texture = ExtResource("1_7ycun")
 region_rect = Rect2(0, 16, 16, 16)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1690780820]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=778079343]
 shape = SubResource("RectangleShape2D_hy0h8")

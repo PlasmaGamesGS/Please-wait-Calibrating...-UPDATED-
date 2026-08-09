@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://v5fabm00vbti"]
 
-[ext_resource type="TileSet" uid="uid://bb21qgbki857y" path="res://assets/tile_sets/alpha_tileset_floor1.tres" id="1_3jsql"]
+[ext_resource type="TileSet" uid="uid://bb21qgbki857y" path="res://assets/tile_sets/floor1_tileset.tres" id="1_3jsql"]
 [ext_resource type="Texture2D" uid="uid://nw6xusphensp" path="res://assets/images/under_construction.jpg" id="2_msx55"]
-[ext_resource type="Texture2D" uid="uid://bg83yav8gkuj0" path="res://assets/tile_sets/alpha_tileset_floor1.png" id="3_exikx"]
+[ext_resource type="Texture2D" uid="uid://bg83yav8gkuj0" path="res://assets/tile_sets/floor1_tileset.png" id="3_exikx"]
 [ext_resource type="PackedScene" uid="uid://vcr0q0taymbt" path="res://scenes/propts/exit_door.tscn" id="4_3u3s4"]
 [ext_resource type="PackedScene" uid="uid://cifs4vgj1m2u4" path="res://scenes/propts/entrance_door.tscn" id="5_ynh0r"]
 [ext_resource type="Script" uid="uid://y68njo34gjc7" path="res://scenes/propts/scripts/secret_exit.gd" id="6_xya6m"]
@@ -79,12 +79,6 @@ position = Vector2(-104, 80)
 position = Vector2(296, 72)
 script = ExtResource("6_xya6m")
 secret_area = NodePath("Area2D")
-
-[node name="Sprite2D" parent="SecretExit" index="0" unique_id=105806828]
-visible = false
-
-[node name="Sprite2D2" parent="SecretExit" index="1" unique_id=1640552477]
-visible = false
 
 [node name="CollisionShape2D" parent="SecretExit/Area2D" parent_id_path=PackedInt32Array(488715745, 1654402977) index="0" unique_id=2086962748]
 shape = SubResource("CapsuleShape2D_7y46i")

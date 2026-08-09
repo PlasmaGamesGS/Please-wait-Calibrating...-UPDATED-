@@ -1,7 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://d3qso5yw6drip"]
 
-[ext_resource type="FontFile" uid="uid://bwstdhnpr7i77" path="res://assets/visuals/fonts/computerfont/Computerfont.ttf" id="1_xn6iq"]
-[ext_resource type="FontFile" uid="uid://bxevb61csv7tg" path="res://assets/visuals/fonts/computer_7/computer_7.ttf" id="2_o5f52"]
+[ext_resource type="FontFile" uid="uid://bwstdhnpr7i77" path="res://new_assets/visuals/fonts/computerfont/Computerfont.ttf" id="1_xn6iq"]
+[ext_resource type="FontFile" uid="uid://bxevb61csv7tg" path="res://new_assets/visuals/fonts/computer_7/computer_7.ttf" id="2_o5f52"]
 
 [resource]
 Button/colors/font_color = Color(0.03125, 0, 1, 1)

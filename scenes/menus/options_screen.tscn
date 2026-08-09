@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dvll54kwow61m"]
 
+[ext_resource type="Script" uid="uid://cgbc0muj1ue0u" path="res://scenes/menus/scripts/options_screen.gd" id="1_th8c0"]
 [ext_resource type="Theme" uid="uid://d3qso5yw6drip" path="res://assets/visuals/themes/title_screen_theme.tres" id="3_mykea"]
 [ext_resource type="StyleBox" uid="uid://ysilah71lpef" path="res://assets/visuals/themes/title_screen_button_normal.tres" id="4_kph5i"]
 [ext_resource type="StyleBox" uid="uid://dd1mw22e4yjl3" path="res://assets/visuals/themes/title_screen_button_pressed.tres" id="5_1mbe2"]
@@ -15,6 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_th8c0")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2073392845]
 layout_mode = 0

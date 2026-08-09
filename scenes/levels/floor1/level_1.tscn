@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bwcp3vo8nm80s"]
 
-[ext_resource type="TileSet" uid="uid://bb21qgbki857y" path="res://assets/tile_sets/alpha_tileset_floor1.tres" id="1_6761a"]
+[ext_resource type="TileSet" uid="uid://bb21qgbki857y" path="res://assets/tile_sets/floor1_tileset.tres" id="1_6761a"]
 [ext_resource type="PackedScene" uid="uid://bpomee7oqkmge" path="res://scenes/propts/border.tscn" id="2_sk5k4"]
 [ext_resource type="PackedScene" uid="uid://vcr0q0taymbt" path="res://scenes/propts/exit_door.tscn" id="3_oc4kc"]
 [ext_resource type="PackedScene" uid="uid://cifs4vgj1m2u4" path="res://scenes/propts/entrance_door.tscn" id="4_s8va5"]
@@ -30,73 +30,73 @@ position = Vector2(-152, 80)
 position = Vector2(-8, 18)
 scale = Vector2(2.329543, 2.2302399)
 
-[node name="UnidirectionalTiles" type="Node" parent="." unique_id=1165656267]
+[node name="Platforms" type="Node" parent="." unique_id=1165656267]
 
-[node name="UnidirectionalTile" parent="UnidirectionalTiles" unique_id=1200804068 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
-position = Vector2(104, 60)
+[node name="Platform13" parent="Platforms" unique_id=1200804068 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+position = Vector2(104, 44)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile2" parent="UnidirectionalTiles" unique_id=1964572729 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
-position = Vector2(88, 60)
+[node name="Platform12" parent="Platforms" unique_id=1964572729 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+position = Vector2(88, 44)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile3" parent="UnidirectionalTiles" unique_id=899365524 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
-position = Vector2(72, 60)
+[node name="Platform11" parent="Platforms" unique_id=899365524 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+position = Vector2(72, 44)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile4" parent="UnidirectionalTiles" unique_id=840987163 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
-position = Vector2(120, 60)
+[node name="Platform14" parent="Platforms" unique_id=840987163 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+position = Vector2(120, 44)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile5" parent="UnidirectionalTiles" unique_id=1461932302 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+[node name="Platform9" parent="Platforms" unique_id=1461932302 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
 position = Vector2(120, 12)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile15" parent="UnidirectionalTiles" unique_id=865859534 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+[node name="Platform10" parent="Platforms" unique_id=865859534 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
 position = Vector2(136, 12)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile14" parent="UnidirectionalTiles" unique_id=25755465 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+[node name="Platform8" parent="Platforms" unique_id=25755465 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
 position = Vector2(104, 12)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile6" parent="UnidirectionalTiles" unique_id=2109946939 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
-position = Vector2(136, 60)
+[node name="Platform15" parent="Platforms" unique_id=2109946939 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+position = Vector2(136, 44)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile7" parent="UnidirectionalTiles" unique_id=24965846 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
-position = Vector2(152, 60)
+[node name="Platform16" parent="Platforms" unique_id=24965846 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+position = Vector2(152, 44)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile8" parent="UnidirectionalTiles" unique_id=81270259 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
-position = Vector2(168, 60)
+[node name="Platform17" parent="Platforms" unique_id=81270259 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+position = Vector2(168, 44)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile9" parent="UnidirectionalTiles" unique_id=278529634 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+[node name="Platform2" parent="Platforms" unique_id=278529634 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
 position = Vector2(-88, 76)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile13" parent="UnidirectionalTiles" unique_id=276221826 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+[node name="Platform1" parent="Platforms" unique_id=276221826 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
 position = Vector2(-104, 76)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile10" parent="UnidirectionalTiles" unique_id=458833763 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+[node name="Platform3" parent="Platforms" unique_id=458833763 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
 position = Vector2(-72, 76)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile17" parent="UnidirectionalTiles" unique_id=536530090 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+[node name="Platform4" parent="Platforms" unique_id=536530090 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
 position = Vector2(-56, 76)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile11" parent="UnidirectionalTiles" unique_id=1335178043 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+[node name="Platform6" parent="Platforms" unique_id=1335178043 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
 position = Vector2(-56, 44)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile16" parent="UnidirectionalTiles" unique_id=2105151523 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+[node name="Platform5" parent="Platforms" unique_id=2105151523 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
 position = Vector2(-72, 44)
 player = NodePath("../../Player")
 
-[node name="UnidirectionalTile12" parent="UnidirectionalTiles" unique_id=1522286621 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
+[node name="Platform7" parent="Platforms" unique_id=1522286621 node_paths=PackedStringArray("player") instance=ExtResource("7_oc4kc")]
 position = Vector2(-40, 44)
 player = NodePath("../../Player")
 

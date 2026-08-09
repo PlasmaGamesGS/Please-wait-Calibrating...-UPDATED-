@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://isix7d8tu3y6" path="res://scenes/propts/scripts/player.gd" id="1_g2els"]
 [ext_resource type="SpriteFrames" uid="uid://dcrber2pv0i8a" path="res://assets/sprites/player/sprite_frames.tres" id="2_g2els"]
-[ext_resource type="TileSet" uid="uid://bb21qgbki857y" path="res://assets/tile_sets/alpha_tileset_floor1.tres" id="3_qhqgy"]
+[ext_resource type="TileSet" uid="uid://bb21qgbki857y" path="res://assets/tile_sets/floor1_tileset.tres" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kkt6c"]
 size = Vector2(11.476191, 30.612244)
@@ -11,7 +11,7 @@ size = Vector2(11.476191, 30.612244)
 radius = 6.0
 height = 28.0
 
-[node name="Player" type="CharacterBody2D" unique_id=712633534 node_paths=PackedStringArray("animation", "area_2d")]
+[node name="Player" type="CharacterBody2D" unique_id=712633534 node_paths=PackedStringArray("animation", "area_2d") groups=["characters"]]
 z_index = 1
 collision_layer = 4
 script = ExtResource("1_g2els")
@@ -20,9 +20,7 @@ area_2d = NodePath("Area2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=843318415]
 sprite_frames = ExtResource("2_g2els")
-animation = &"run"
-frame = 1
-frame_progress = 0.1186992
+animation = &"openingDoor"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=897851731]
 position = Vector2(0.024999402, 1.0000004)

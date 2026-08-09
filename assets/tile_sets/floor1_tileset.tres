@@ -1,10 +1,9 @@
 [gd_resource type="TileSet" format=3 uid="uid://bb21qgbki857y"]
 
-[ext_resource type="Texture2D" uid="uid://bg83yav8gkuj0" path="res://assets/tile_sets/alpha_tileset_floor1.png" id="1_aqmjt"]
-[ext_resource type="Texture2D" uid="uid://csi68473q7kv8" path="res://assets/tile_sets/alpha_tileset_floor2.png" id="2_h42kx"]
+[ext_resource type="Texture2D" uid="uid://bg83yav8gkuj0" path="res://assets/tile_sets/floor1_tileset.png" id="1_2htr3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p3hgg"]
-texture = ExtResource("1_aqmjt")
+texture = ExtResource("1_2htr3")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -43,8 +42,11 @@ texture = ExtResource("1_aqmjt")
 4:3/0 = 0
 4:0/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2htr3"]
+load_path = "res://.godot/imported/alpha_tileset_floor2.png-a13eb8a8679ccc34f8415752db70e870.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4tblb"]
-texture = ExtResource("2_h42kx")
+texture = SubResource("CompressedTexture2D_2htr3")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0

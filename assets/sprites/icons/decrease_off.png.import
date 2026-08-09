@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ecqmgqajmai0"
-path="res://.godot/imported/gate.png-911bf6be97b92624ecedc7344d866f8d.ctex"
+uid="uid://b3jm36k0x1hgq"
+path="res://.godot/imported/decrease_off.png-68eb84301310327d096c8a09034b0d61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/propts/gate.png"
-dest_files=["res://.godot/imported/gate.png-911bf6be97b92624ecedc7344d866f8d.ctex"]
+source_file="res://assets/sprites/icons/decrease_off.png"
+dest_files=["res://.godot/imported/decrease_off.png-68eb84301310327d096c8a09034b0d61.ctex"]
 
 [params]
 
