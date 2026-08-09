@@ -27,10 +27,14 @@ func _ready():
 func _physics_process(delta):
 	if !_alive:
 		return
-	
+
+#idle y abrir
 	if velocity == Vector2(0, 0):
-		animation.play("idle")
-	
+		if opening:
+			animation.play("openingDoor")
+		else:
+			animation.play("idle")
+
 	#movimiento horizontal
 	if Input.is_action_pressed("right"):
 		animation.flip_h = false

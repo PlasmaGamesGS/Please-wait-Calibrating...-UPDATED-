@@ -6,7 +6,7 @@ extends Node2D
 func _ready() -> void:
 	area_2d.body_entered.connect(_fake_exit)
 
-#IFK DUDE!!1!!!!
+
 func _fake_exit(_body: Node2D) -> void:
 	visible = false
 	exit_door.visible = true

@@ -1,13 +1,27 @@
 extends Node2D
 
 @export var area_2d: Area2D
+@export var sprite: AnimatedSprite2D 
 
+var opened: bool
 
 func _ready() -> void:
 	add_to_group("exit_doors")
-	area_2d.body_entered.connect(_exit)
+	area_2d.body_entered.connect(_open)
+	area_2d.body_exited.connect(_close)
 
-
-func _exit(_body: Node2D) -> void:
+func _open(_body: CharacterBody2D) -> void:
 	if visible:
-		get_parent().get_parent().next_level()
+		sprite.frame = 1
+		_body.opening = true
+		opened = true
+
+func _process(delta: float) -> void:
+	if opened:
+		if Input.is_action_just_pressed("openDoor"):
+			get_parent().get_parent().next_level()
+
+func _close(_body: CharacterBody2D) -> void:
+	sprite.frame = 0
+	_body.opening = false
+	opened = false
