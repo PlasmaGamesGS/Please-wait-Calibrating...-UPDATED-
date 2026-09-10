@@ -16,7 +16,7 @@ func _open(_body: CharacterBody2D) -> void:
 		_body.opening = true
 		opened = true
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if opened:
 		if Input.is_action_just_pressed("openDoor"):
 			get_parent().get_parent().next_level()

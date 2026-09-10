@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://biuwrtlu0gmv8"]
+
+[ext_resource type="Shader" uid="uid://y1j32fkyxf1x" path="res://assets/visuals/shaders/desaturated_shader.gdshader" id="1_524ny"]
+
+[resource]
+shader = ExtResource("1_524ny")
+shader_parameter/saturation = 0.0

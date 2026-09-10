@@ -1,40 +1,23 @@
 [gd_scene format=3 uid="uid://d217k2hlly2g"]
 
 [ext_resource type="Script" uid="uid://46u70bv18yaa" path="res://scenes/propts/scripts/fake_exit_door.gd" id="1_0qo61"]
+[ext_resource type="Material" uid="uid://biuwrtlu0gmv8" path="res://assets/visuals/shaders/desaturated_material.tres" id="2_tc1x7"]
 [ext_resource type="Texture2D" uid="uid://cqkdtm73gfona" path="res://assets/sprites/propts/exit_door.png" id="3_tc1x7"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x6nx8"]
-atlas = ExtResource("3_tc1x7")
-region = Rect2(0, 0, 16, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1d5qf"]
-atlas = ExtResource("3_tc1x7")
-region = Rect2(16, 0, 16, 40)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_kthd3"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x6nx8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1d5qf")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tc1x7"]
 size = Vector2(16, 32)
 
-[node name="FakeExitDoor" type="Node2D" unique_id=629507079 node_paths=PackedStringArray("area_2d")]
+[node name="FakeExitDoor" type="Node2D" unique_id=629507079 node_paths=PackedStringArray("area_2d", "sprite")]
 script = ExtResource("1_0qo61")
 area_2d = NodePath("Area2D")
+sprite = NodePath("Sprite2D")
+desaturatedMaterial = ExtResource("2_tc1x7")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2072765086]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1286925409]
 position = Vector2(0, -4)
-sprite_frames = SubResource("SpriteFrames_kthd3")
+texture = ExtResource("3_tc1x7")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 40)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=156140710]
 collision_layer = 0
