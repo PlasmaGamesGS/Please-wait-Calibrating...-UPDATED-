@@ -4,10 +4,33 @@
 [ext_resource type="Texture2D" uid="uid://nw6xusphensp" path="res://assets/images/under_construction.jpg" id="2_msx55"]
 [ext_resource type="Texture2D" uid="uid://bg83yav8gkuj0" path="res://assets/tile_sets/floor1_tileset.png" id="3_exikx"]
 [ext_resource type="PackedScene" uid="uid://vcr0q0taymbt" path="res://scenes/propts/exit_door.tscn" id="4_3u3s4"]
+[ext_resource type="Texture2D" uid="uid://vp0vvfe35utu" path="res://assets/sprites/propts/final_exit_door.png" id="5_msx55"]
 [ext_resource type="PackedScene" uid="uid://cifs4vgj1m2u4" path="res://scenes/propts/entrance_door.tscn" id="5_ynh0r"]
 [ext_resource type="Script" uid="uid://y68njo34gjc7" path="res://scenes/propts/scripts/secret_exit.gd" id="6_xya6m"]
 [ext_resource type="PackedScene" uid="uid://d1bern1ybm1xl" path="res://scenes/propts/player.tscn" id="7_qe8nv"]
 [ext_resource type="PackedScene" uid="uid://bbuggp42inlqw" path="res://scenes/propts/gate.tscn" id="8_3jsql"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exikx"]
+atlas = ExtResource("5_msx55")
+region = Rect2(0, 0, 16, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3u3s4"]
+atlas = ExtResource("5_msx55")
+region = Rect2(16, 0, 16, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_18nlu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exikx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3u3s4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7y46i"]
 radius = 8.0
@@ -72,6 +95,9 @@ region_rect = Rect2(64, 16, 16, 16)
 [node name="ExitDoor" parent="." unique_id=217527439 instance=ExtResource("4_3u3s4")]
 position = Vector2(104, 80)
 
+[node name="AnimatedSprite2D" parent="ExitDoor" index="0" unique_id=89122485]
+sprite_frames = SubResource("SpriteFrames_18nlu")
+
 [node name="EntranceDoor" parent="." unique_id=997295792 instance=ExtResource("5_ynh0r")]
 position = Vector2(-104, 80)
 
@@ -95,4 +121,5 @@ z_index = 1
 position = Vector2(200, 72)
 player = NodePath("../Player")
 
+[editable path="ExitDoor"]
 [editable path="SecretExit"]
