@@ -37,6 +37,9 @@ func _delete_level():
 func _restart_level():
 	_delete_level()
 	_create_level.call_deferred(_current_level)
+	if _current_level == 5:
+		_under_construction.stop()
+		_loop.play()
 
 func next_level():
 	if _secret_level == false:
