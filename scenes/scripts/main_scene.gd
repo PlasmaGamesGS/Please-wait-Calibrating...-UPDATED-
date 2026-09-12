@@ -49,5 +49,5 @@ func next_level():
 			_current_level += 1
 			_restart_level()
 	else:
-		_current_level = 4
+		_current_level = 5
 		_restart_level()

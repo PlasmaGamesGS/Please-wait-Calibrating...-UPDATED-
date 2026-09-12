@@ -8,7 +8,6 @@
 [ext_resource type="Script" uid="uid://y68njo34gjc7" path="res://scenes/propts/scripts/secret_exit.gd" id="6_xya6m"]
 [ext_resource type="PackedScene" uid="uid://d1bern1ybm1xl" path="res://scenes/propts/player.tscn" id="7_qe8nv"]
 [ext_resource type="PackedScene" uid="uid://bbuggp42inlqw" path="res://scenes/propts/gate.tscn" id="8_3jsql"]
-[ext_resource type="PackedScene" uid="uid://drw3b5qpq6agu" path="res://scenes/propts/passkey.tscn" id="9_msx55"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7y46i"]
 radius = 8.0
@@ -81,6 +80,9 @@ position = Vector2(296, 72)
 script = ExtResource("6_xya6m")
 secret_area = NodePath("Area2D")
 
+[node name="AnimatedSprite2D" parent="SecretExit" index="0" unique_id=89122485]
+visible = false
+
 [node name="CollisionShape2D" parent="SecretExit/Area2D" parent_id_path=PackedInt32Array(488715745, 1654402977) index="0" unique_id=2086962748]
 shape = SubResource("CapsuleShape2D_7y46i")
 
@@ -92,8 +94,5 @@ EnDoorPosition = NodePath("../EntranceDoor")
 z_index = 1
 position = Vector2(200, 72)
 player = NodePath("../Player")
-
-[node name="Passkey" parent="." unique_id=431921443 instance=ExtResource("9_msx55")]
-position = Vector2(-22, 76)
 
 [editable path="SecretExit"]
