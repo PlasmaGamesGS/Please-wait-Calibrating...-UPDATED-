@@ -3,16 +3,19 @@ extends CharacterBody2D
 signal player_died
 
 var _speed: float = 100.0 
-
 var _jump_speed: float = -300.0
-var _alive: bool = true
+
 var gravity: Vector2
+var _size: Vector2 = Vector2(1, 1)
+
+var _alive: bool = true
 var alt_gravity: bool
 var _alt_size: bool
 var stair: bool
-var _size: Vector2 = Vector2(1, 1)
-var _new_size: int = 3
 var opening: bool
+
+var _new_size: int = 3
+
 
 @export var animation: AnimatedSprite2D
 @export var area_2d: Area2D

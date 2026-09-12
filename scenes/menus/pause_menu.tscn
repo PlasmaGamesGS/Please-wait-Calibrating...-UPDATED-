@@ -8,6 +8,7 @@
 [ext_resource type="StyleBox" uid="uid://bx68ihuqm7lyw" path="res://assets/visuals/themes/title_screen_button_focus.tres" id="5_ofnjo"]
 
 [node name="PauseMenu" type="Control" unique_id=894294058]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

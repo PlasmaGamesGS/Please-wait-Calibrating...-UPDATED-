@@ -261,7 +261,7 @@ animation = NodePath("AnimationPlayer")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1073809016]
 sprite_frames = SubResource("SpriteFrames_vb86h")
-frame_progress = 0.024954438
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=926396848]
 scale = Vector2(1.082628, 1)
