@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://devp14g52rfue" path="res://assets/sprites/propts/first_entrance_door.png" id="4_jf27k"]
 [ext_resource type="PackedScene" uid="uid://cifs4vgj1m2u4" path="res://scenes/propts/entrance_door.tscn" id="4_s8va5"]
 [ext_resource type="PackedScene" uid="uid://d1bern1ybm1xl" path="res://scenes/propts/player.tscn" id="5_dga24"]
-[ext_resource type="PackedScene" uid="uid://bb2huh66qnaah" path="res://scenes/propts/gravity_modifier.tscn" id="6_sk5k4"]
+[ext_resource type="PackedScene" uid="uid://bb2huh66qnaah" path="res://scenes/errors/gravity_modifier.tscn" id="6_sk5k4"]
 [ext_resource type="PackedScene" uid="uid://ve3vcswa3abg" path="res://scenes/propts/platform.tscn" id="7_oc4kc"]
 
 [node name="Level1" type="Node2D" unique_id=1135837990]

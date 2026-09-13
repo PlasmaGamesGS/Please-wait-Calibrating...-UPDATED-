@@ -4,13 +4,13 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mm5ji"]
 
-[node name="SizeModifier" type="Node2D" node_paths=PackedStringArray("area_2d")]
+[node name="SizeModifier" type="Node2D" unique_id=386632620 node_paths=PackedStringArray("area_2d")]
 script = ExtResource("1_j088y")
 area_2d = NodePath("Area2D")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=41473187]
 collision_layer = 16
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=612932487]
 shape = SubResource("CircleShape2D_mm5ji")

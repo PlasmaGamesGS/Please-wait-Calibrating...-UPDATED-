@@ -147,20 +147,20 @@ scale_max = 20.0
 scale_curve = SubResource("CurveTexture_wigkw")
 color_ramp = SubResource("GradientTexture1D_fdawp")
 
-[node name="Player" type="CharacterBody2D" unique_id=712633534 node_paths=PackedStringArray("animation", "area_2d", "constParticles", "instParticles", "deathParticles") groups=["characters"]]
+[node name="Player" type="CharacterBody2D" unique_id=712633534 node_paths=PackedStringArray("animation", "area_2d", "constParticles", "instParticles") groups=["characters"]]
 z_index = 1
 collision_layer = 4
 script = ExtResource("1_g2els")
 animation = NodePath("AnimatedSprite2D")
 area_2d = NodePath("Area2D")
-constParticles = NodePath("(Unused)ConstantParticles")
-instParticles = NodePath("ErrorParticles")
-deathParticles = NodePath("DeathParticles")
+constParticles = NodePath("ConstantParticles")
+instParticles = NodePath("InstantParticles")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=843318415]
 position = Vector2(-1, 0)
 sprite_frames = SubResource("SpriteFrames_fdawp")
-animation = &"idle"
+animation = &"run"
+frame_progress = 0.54166305
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=897851731]
 position = Vector2(0.024999402, 1.0000004)
@@ -177,7 +177,7 @@ shape = SubResource("CapsuleShape2D_g2els")
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=145316628]
 tile_set = ExtResource("3_qhqgy")
 
-[node name="(Unused)ConstantParticles" type="CPUParticles2D" parent="." unique_id=1367952638]
+[node name="ConstantParticles" type="CPUParticles2D" parent="." unique_id=1367952638]
 position = Vector2(4, 0)
 emitting = false
 amount = 5
@@ -187,17 +187,10 @@ emission_sphere_radius = 2.3
 gravity = Vector2(0, 0)
 color = Color(1, 0.49019608, 0, 1)
 
-[node name="ErrorParticles" type="GPUParticles2D" parent="." unique_id=98218317]
+[node name="InstantParticles" type="GPUParticles2D" parent="." unique_id=98218317]
+self_modulate = Color(1, 0.49019608, 0, 1)
 emitting = false
 amount = 15
-one_shot = true
-explosiveness = 1.0
-process_material = SubResource("ParticleProcessMaterial_vb86h")
-
-[node name="DeathParticles" type="GPUParticles2D" parent="." unique_id=1205282695]
-emitting = false
-amount = 100
-lifetime = 0.5
 one_shot = true
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_vb86h")

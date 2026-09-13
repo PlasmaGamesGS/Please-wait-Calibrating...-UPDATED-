@@ -6,7 +6,7 @@ var _speed: float = 100.0
 var _jump_speed: float = -300.0
 
 var gravity: Vector2
-var _size: Vector2 = Vector2(1, 1)
+var _size = get_scale()
 
 var _alive: bool = true
 var alt_gravity: bool
@@ -14,20 +14,22 @@ var _alt_size: bool
 var stair: bool
 var opening: bool
 
-var _new_size: int = 3
+var _new_size: float
 
 
 @export var animation: AnimatedSprite2D
 @export var area_2d: Area2D
 @export var EnDoorPosition: Node2D
+@export var constParticles: CPUParticles2D
+@export var instParticles: GPUParticles2D
+@export var deathParticles: GPUParticles2D
 
 func _ready():
-	scale = _size
 	position = EnDoorPosition.position
 	area_2d.body_entered.connect(_damaged)
 
 
-func _physics_process(delta):
+func _process(delta):
 	if !_alive:
 		return
 
@@ -41,12 +43,14 @@ func _physics_process(delta):
 	#movimiento horizontal
 	if Input.is_action_pressed("right"):
 		animation.flip_h = false
+		constParticles.position.x = 4
 		velocity.x = _speed
 		if velocity.y == 0:
 			animation.play("run")
 
 	elif Input.is_action_pressed("left"):
 		animation.flip_h = true
+		constParticles.position.x = -6
 		velocity.x = -_speed
 		if velocity.y == 0:
 			animation.play("run")
@@ -60,14 +64,11 @@ func _physics_process(delta):
 			gravity = Vector2(0, 0)
 	elif alt_gravity:
 		gravity = -get_gravity()
+		#constParticles.emitting = true
 	else:
 		gravity = get_gravity()
+		#constParticles.emitting = false
 	velocity += gravity * delta
-	
-	if alt_gravity:
-		scale.y = - _size.y
-	else:
-		scale.y = _size.y
 	
 	#salto
 	if Input.is_action_pressed("jump"):
@@ -96,20 +97,21 @@ func _physics_process(delta):
 
 #recibir daño y morir
 func _damaged(_body: Node2D) -> void:
-	animation.modulate = Color(0.25, 0.25, 0.25, 1.0)
+	animation.visible = false
 	_alive = false
 	animation.stop()
+	deathParticles.emitting = true
 	await get_tree().create_timer(1).timeout
 	player_died.emit()
 
 
 #modificador de gravedad
 func _mod_gravity():
-	for i in 2:
-		animation.modulate = Color(1.0, 0.492, 0.0, 1.0)
-		await get_tree().create_timer(0.05).timeout
-		animation.modulate = self.modulate
-		await get_tree().create_timer(0.05).timeout
+	instParticles.self_modulate = Color("ff7d00")
+	instParticles.emitting = true
+	await get_tree().create_timer(0.2).timeout
+	instParticles.emitting = false
+	scale.y = - scale.y
 	if !alt_gravity:
 		alt_gravity = true
 	else:
@@ -117,14 +119,14 @@ func _mod_gravity():
 
 #shhhh irrelevant
 func _mod_size():
-	for i in 2:
-		if !_alt_size:
-			_alt_size = true
-			scale = _size * _new_size
-		else:
-			_alt_size = false
-			scale = _size
-		animation.modulate = Color(0.0, 1.0, 0.083, 1.0)
-		await get_tree().create_timer(0.05).timeout
-		animation.modulate = self.modulate
-		await get_tree().create_timer(0.05).timeout
+	if !_alt_size:
+		_alt_size = true
+		scale *= _new_size
+	else:
+		_alt_size = false
+		scale = _size
+	deathParticles.amount *= scale.x
+	instParticles.self_modulate = Color("00ff15ff")
+	instParticles.emitting = true
+	await get_tree().create_timer(0.2).timeout
+	instParticles.emitting = false

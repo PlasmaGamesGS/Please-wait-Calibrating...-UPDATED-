@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b76t8q3hpixlt" path="res://scenes/propts/scripts/gate.gd" id="1_7g872"]
 [ext_resource type="Texture2D" uid="uid://cte03syywp63f" path="res://assets/sprites/propts/gate.png" id="1_rvctx"]
+[ext_resource type="Texture2D" uid="uid://bo5xjyykxcaxn" path="res://assets/sprites/icons/key_F.png" id="3_qurx4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7g872"]
 atlas = ExtResource("1_rvctx")
@@ -176,7 +177,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, -48), Vector2(0, 0)]
+"values": [Vector2(0, -44), Vector2(0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -188,7 +189,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, -48), Vector2(0, 0)]
+"values": [Vector2(0, -44), Vector2(0, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -200,7 +201,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, -25), Vector2(0, 23)]
+"values": [Vector2(0, -21), Vector2(0, 23)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -228,7 +229,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, -48)]
+"values": [Vector2(0, 0), Vector2(0, -44)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -240,7 +241,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, -48)]
+"values": [Vector2(0, 0), Vector2(0, -44)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s1cwm"]
@@ -253,11 +254,62 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qurx4"]
 size = Vector2(16, 1.5)
 
-[node name="Gate" type="StaticBody2D" unique_id=1010708501 node_paths=PackedStringArray("collision", "animation")]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrd5c"]
+atlas = ExtResource("3_qurx4")
+region = Rect2(0, 0, 23, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g37f6"]
+atlas = ExtResource("3_qurx4")
+region = Rect2(23, 0, 23, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdpk8"]
+atlas = ExtResource("3_qurx4")
+region = Rect2(46, 0, 23, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53gcx"]
+atlas = ExtResource("3_qurx4")
+region = Rect2(69, 0, 23, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daohy"]
+atlas = ExtResource("3_qurx4")
+region = Rect2(46, 0, 23, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qo7bd"]
+atlas = ExtResource("3_qurx4")
+region = Rect2(23, 0, 23, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1cwm"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_rrd5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g37f6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdpk8")
+}, {
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_53gcx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daohy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qo7bd")
+}],
+"loop": 1,
+"name": &"pressing",
+"speed": 15.0
+}]
+
+[node name="Gate" type="StaticBody2D" unique_id=1010708501 node_paths=PackedStringArray("collision", "animation", "key")]
 z_index = 2
 script = ExtResource("1_7g872")
 collision = NodePath("CollisionShape2D")
 animation = NodePath("AnimationPlayer")
+key = NodePath("fKey")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1073809016]
 sprite_frames = SubResource("SpriteFrames_vb86h")
@@ -278,3 +330,11 @@ collision_layer = 2
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_qurx4")
 disabled = true
+
+[node name="fKey" type="AnimatedSprite2D" parent="." unique_id=1404158360]
+visible = false
+z_index = 3
+position = Vector2(0, -34)
+sprite_frames = SubResource("SpriteFrames_s1cwm")
+animation = &"pressing"
+frame_progress = 0.28677884

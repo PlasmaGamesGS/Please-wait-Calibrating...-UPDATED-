@@ -1,10 +1,11 @@
 Errores conocidos hasta el momento:
-	- [SOLUCIONADO] Escaleras:
-		~ Saltar en ellas te lanza despedido hacia arriba con gran velocidad, se ha solucionado temporalmente eliminando la capacidad del jugador de saltar si está en contacto con una, pero esa no es la opción idonea.
-		~ Si saltas y entras en contacto con una estando en el aire, puedes salir disparado hacia arriba si estabas elevandote, o deslizarte lentamente escalera abajo si estabas cayendo.
-		~ (Sigue ocurriendo pero no afecta en nada al resto del juego) La colisión del area de la escalera se aumenta sobre el eje y de repente sin tocar nada, afectando al nodo base y a todas las escenas que lo contengan.
+	- Escaleras:
+		PLEASE NO.
+		Cuando saltas mientras estás en una escalera, "stair" se vuelve falso, pero eso provoca que para que vuelva a ser verdadero deberás salir y luego volver a entrar en la escalera.
 	- Pantalla de título:
 		Cuando se referencia la pantalla de título se da el siguiente error:
 			(desde la pantalla final)  E 0:00:02:046   _printerr: res://scenes/menus/ending_screen.tscn:22 - Parse Error: [ext_resource] referenced non-existent resource at: res://scenes/menus/title_screen.tscn.  <C++ Source>  scene/resources/resource_format_text.cpp:40 @ _printerr()
 			(desde el botón back en el menú de ajustes)  E 0:00:06:403   options_screen.gd:11 @ _on_back_button_up(): res://scenes/menus/ending_screen.tscn:22 - Parse Error: [ext_resource] referenced non-existent resource at: res://scenes/menus/title_screen.tscn.  <C++ Source>  scene/resources/resource_format_text.cpp:40 @ _printerr()  <Stack Trace> options_screen.gd:11 @ _on_back_button_up()
 		Aún con este error el juego funciona a la perfección, por lo que no me preocupa demasiado, pero temo que esto pueda romper partes del juego a futuro por lo que iré buscando cual puede ser la solución.
+	- Otros:
+		Si el error de gravedad ocurre poco después de otro error de gravedad, puede que las particulas no salgan
