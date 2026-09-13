@@ -65,7 +65,7 @@ position = Vector2(168, -80)
 scale = Vector2(0.8, 1.6)
 
 [node name="GravityModifier2" parent="GravityModifiers" unique_id=1650474383 instance=ExtResource("8_qngu0")]
-position = Vector2(-19, -77)
+position = Vector2(-40.000004, -65.00001)
 scale = Vector2(1.8800015, 1.48)
 
 [node name="GravityModifier3" parent="GravityModifiers" unique_id=432107664 instance=ExtResource("8_qngu0")]

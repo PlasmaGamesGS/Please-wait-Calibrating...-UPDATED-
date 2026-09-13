@@ -108,6 +108,7 @@ func _damaged(_body: Node2D) -> void:
 
 #modificador de gravedad
 func _mod_gravity():
+	instParticles.restart()
 	instParticles.self_modulate = Color("ff7d00")
 	instParticles.emitting = true
 	await get_tree().create_timer(0.2).timeout

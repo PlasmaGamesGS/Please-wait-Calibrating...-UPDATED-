@@ -8,6 +8,28 @@
 [ext_resource type="PackedScene" uid="uid://bb2huh66qnaah" path="res://scenes/errors/gravity_modifier.tscn" id="6_sk5k4"]
 [ext_resource type="PackedScene" uid="uid://ve3vcswa3abg" path="res://scenes/propts/platform.tscn" id="7_oc4kc"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_jf27k"]
+atlas = ExtResource("4_jf27k")
+region = Rect2(16, 0, 16, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lq7fc"]
+atlas = ExtResource("4_jf27k")
+region = Rect2(0, 0, 16, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jqgfl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jf27k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lq7fc")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Level1" type="Node2D" unique_id=1135837990]
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=860657594]
@@ -24,8 +46,8 @@ position = Vector2(168, 80)
 [node name="EntranceDoor" parent="." unique_id=182625724 instance=ExtResource("4_s8va5")]
 position = Vector2(-152, 80)
 
-[node name="Sprite2D" parent="EntranceDoor" index="0" unique_id=394127359]
-texture = ExtResource("4_jf27k")
+[node name="AnimatedSprite2D" parent="EntranceDoor" index="0" unique_id=1328292289]
+sprite_frames = SubResource("SpriteFrames_jqgfl")
 
 [node name="GravityModifier" parent="." unique_id=1182248526 instance=ExtResource("6_sk5k4")]
 position = Vector2(-8, 18)
