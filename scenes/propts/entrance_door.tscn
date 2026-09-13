@@ -1,17 +1,43 @@
 [gd_scene format=3 uid="uid://cifs4vgj1m2u4"]
 
 [ext_resource type="Texture2D" uid="uid://dsg7uj116vl0b" path="res://assets/sprites/propts/entrance_door.png" id="1_7ycun"]
+[ext_resource type="Script" uid="uid://c30ip5w05x3na" path="res://scenes/propts/scripts/entrance_door.gd" id="1_ig5nt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ig5nt"]
+atlas = ExtResource("1_7ycun")
+region = Rect2(16, 0, 16, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ycun"]
+atlas = ExtResource("1_7ycun")
+region = Rect2(0, 0, 16, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vb86h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ig5nt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ycun")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hy0h8"]
-size = Vector2(16, 32)
+size = Vector2(16, 40)
 
-[node name="EntranceDoor" type="Node2D" unique_id=1171911781]
+[node name="EntranceDoor" type="Node2D" unique_id=1171911781 node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_ig5nt")
+sprite = NodePath("AnimatedSprite2D")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=394127359]
-texture = ExtResource("1_7ycun")
-region_rect = Rect2(0, 16, 16, 16)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1328292289]
+position = Vector2(0, -4)
+sprite_frames = SubResource("SpriteFrames_vb86h")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1690780820]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=778079343]
+position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_hy0h8")

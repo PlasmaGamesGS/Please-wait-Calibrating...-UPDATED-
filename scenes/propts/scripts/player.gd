@@ -27,7 +27,8 @@ var _new_size: float
 func _ready():
 	position = EnDoorPosition.position
 	area_2d.body_entered.connect(_damaged)
-
+	if alt_gravity:
+		scale.y = - scale.y
 
 func _process(delta):
 	if !_alive:
@@ -110,8 +111,8 @@ func _mod_gravity():
 	instParticles.self_modulate = Color("ff7d00")
 	instParticles.emitting = true
 	await get_tree().create_timer(0.2).timeout
-	instParticles.emitting = false
 	scale.y = - scale.y
+	instParticles.emitting = false
 	if !alt_gravity:
 		alt_gravity = true
 	else:

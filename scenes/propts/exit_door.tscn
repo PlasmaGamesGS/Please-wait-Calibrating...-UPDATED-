@@ -6,11 +6,11 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3kcqx"]
 atlas = ExtResource("2_x6nx8")
-region = Rect2(0, 0, 16, 40)
+region = Rect2(0, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jmdfm"]
 atlas = ExtResource("2_x6nx8")
-region = Rect2(16, 0, 16, 40)
+region = Rect2(16, 0, 16, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3pkj3"]
 animations = [{
@@ -27,7 +27,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hy0h8"]
-size = Vector2(16, 32)
+size = Vector2(16, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1d5qf"]
 atlas = ExtResource("3_3kcqx")
@@ -86,7 +86,7 @@ sprite = NodePath("AnimatedSprite2D")
 key = NodePath("eKey")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=89122485]
-position = Vector2(0, -4)
+position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_3pkj3")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1654402977]
@@ -94,12 +94,13 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2086962748]
+position = Vector2(0, -4.4999995)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_hy0h8")
 
 [node name="eKey" type="AnimatedSprite2D" parent="." unique_id=291863258]
 z_index = 3
-position = Vector2(0, -34)
+position = Vector2(0, -42)
 sprite_frames = SubResource("SpriteFrames_vb86h")
 animation = &"pressing"
 frame_progress = 0.55051446

@@ -3,9 +3,7 @@
 [ext_resource type="TileSet" uid="uid://bb21qgbki857y" path="res://assets/tile_sets/floor1_tileset.tres" id="1_osc7o"]
 [ext_resource type="PackedScene" uid="uid://cifs4vgj1m2u4" path="res://scenes/propts/entrance_door.tscn" id="1_wjk5u"]
 [ext_resource type="PackedScene" uid="uid://d1bern1ybm1xl" path="res://scenes/propts/player.tscn" id="2_x42e6"]
-[ext_resource type="PackedScene" uid="uid://bb2huh66qnaah" path="res://scenes/errors/gravity_modifier.tscn" id="5_388ci"]
 [ext_resource type="PackedScene" uid="uid://vcr0q0taymbt" path="res://scenes/propts/exit_door.tscn" id="5_xy1qu"]
-[ext_resource type="PackedScene" uid="uid://6cu08boi147f" path="res://scenes/errors/size_modifier.tscn" id="6_rborn"]
 
 [node name="Level0" type="Node2D" unique_id=1820641413]
 
@@ -27,17 +25,3 @@ position = Vector2(-152, 0)
 [node name="Player" parent="." unique_id=555523304 node_paths=PackedStringArray("EnDoorPosition") instance=ExtResource("2_x42e6")]
 position = Vector2(0, 181)
 EnDoorPosition = NodePath("../EntranceDoor")
-
-[node name="SizeModifier" parent="." unique_id=386632620 instance=ExtResource("6_rborn")]
-position = Vector2(-60, -3)
-altSize = 2.0
-
-[node name="GravityModifier" parent="." unique_id=1630354003 instance=ExtResource("5_388ci")]
-position = Vector2(-100, -5)
-
-[node name="GravityModifier2" parent="." unique_id=73403268 instance=ExtResource("5_388ci")]
-position = Vector2(58, -75)
-
-[node name="SizeModifier2" parent="." unique_id=1120648124 instance=ExtResource("6_rborn")]
-position = Vector2(98, -67)
-altSize = 0.5

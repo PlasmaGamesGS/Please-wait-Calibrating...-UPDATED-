@@ -5,3 +5,4 @@ extends Node2D
 
 func _ready():
 	_player.alt_gravity = true
+	_player.scale.y = - scale.y

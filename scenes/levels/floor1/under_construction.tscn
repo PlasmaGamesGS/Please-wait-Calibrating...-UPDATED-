@@ -4,35 +4,35 @@
 [ext_resource type="Texture2D" uid="uid://nw6xusphensp" path="res://assets/images/under_construction.jpg" id="2_msx55"]
 [ext_resource type="Texture2D" uid="uid://dixi64xkm2gdj" path="res://assets/sprites/propts/scaffold.png" id="3_msx55"]
 [ext_resource type="PackedScene" uid="uid://vcr0q0taymbt" path="res://scenes/propts/exit_door.tscn" id="4_3u3s4"]
-[ext_resource type="Texture2D" uid="uid://vp0vvfe35utu" path="res://assets/sprites/propts/final_exit_door.png" id="5_msx55"]
+[ext_resource type="Texture2D" uid="uid://vp0vvfe35utu" path="res://assets/sprites/propts/final_door.png" id="5_msx55"]
 [ext_resource type="PackedScene" uid="uid://cifs4vgj1m2u4" path="res://scenes/propts/entrance_door.tscn" id="5_ynh0r"]
 [ext_resource type="Script" uid="uid://y68njo34gjc7" path="res://scenes/propts/scripts/secret_exit.gd" id="6_xya6m"]
 [ext_resource type="PackedScene" uid="uid://d1bern1ybm1xl" path="res://scenes/propts/player.tscn" id="7_qe8nv"]
 [ext_resource type="PackedScene" uid="uid://bbuggp42inlqw" path="res://scenes/propts/gate.tscn" id="8_3jsql"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_msx55"]
+atlas = ExtResource("5_msx55")
+region = Rect2(0, 0, 16, 48)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_exikx"]
 atlas = ExtResource("5_msx55")
-region = Rect2(0, 0, 16, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3u3s4"]
-atlas = ExtResource("5_msx55")
-region = Rect2(16, 0, 16, 40)
+region = Rect2(16, 0, 16, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_18nlu"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_exikx")
+"texture": SubResource("AtlasTexture_msx55")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3u3s4")
+"texture": SubResource("AtlasTexture_exikx")
 }],
 "loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7y46i"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_msx55"]
 radius = 8.0
 height = 48.0
 
@@ -132,7 +132,11 @@ secret_area = NodePath("Area2D")
 visible = false
 
 [node name="CollisionShape2D" parent="SecretExit/Area2D" parent_id_path=PackedInt32Array(488715745, 1654402977) index="0" unique_id=2086962748]
-shape = SubResource("CapsuleShape2D_7y46i")
+position = Vector2(0, 0)
+shape = SubResource("CapsuleShape2D_msx55")
+
+[node name="eKey" parent="SecretExit" index="2" unique_id=291863258]
+visible = false
 
 [node name="Player" parent="." unique_id=754175533 node_paths=PackedStringArray("EnDoorPosition") instance=ExtResource("7_qe8nv")]
 position = Vector2(-1, 220)
