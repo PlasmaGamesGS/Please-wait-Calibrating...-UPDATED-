@@ -127,6 +127,7 @@ func _mod_size():
 	else:
 		_alt_size = false
 		scale = _size
+	@warning_ignore("narrowing_conversion")
 	deathParticles.amount *= scale.x
 	instParticles.self_modulate = Color("00ff15ff")
 	instParticles.emitting = true
