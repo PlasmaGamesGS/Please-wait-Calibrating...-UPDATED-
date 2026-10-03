@@ -1,4 +1,4 @@
 extends Node
 
-var currentPatch: String = "Patch A0.0.2.1/10.26/rC1 - The Graphic Update (Hotfix)"
-var gameVersion: String = "Alpha 0.0.2"
+var currentPatch: String = "Update A0.0.3/10.26/rC1 - Screens n' Secrets"
+var gameVersion: String = "Alpha 0.0.3"

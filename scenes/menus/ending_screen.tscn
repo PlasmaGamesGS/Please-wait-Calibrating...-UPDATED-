@@ -5,13 +5,15 @@
 [ext_resource type="Theme" uid="uid://d3qso5yw6drip" path="res://assets/visuals/themes/title_screen_theme.tres" id="3_tvwvb"]
 [ext_resource type="StyleBox" uid="uid://ysilah71lpef" path="res://assets/visuals/themes/title_screen_button_normal.tres" id="4_vm3g7"]
 [ext_resource type="StyleBox" uid="uid://dd1mw22e4yjl3" path="res://assets/visuals/themes/title_screen_button_pressed.tres" id="5_1ffvt"]
-[ext_resource type="StyleBox" uid="uid://vbhy5u6o2uho" path="res://assets/visuals/themes/title_screen_button_hover.tres" id="6_o61ye"]
 [ext_resource type="StyleBox" uid="uid://bx68ihuqm7lyw" path="res://assets/visuals/themes/title_screen_button_focus.tres" id="7_0scsa"]
 [ext_resource type="FontFile" uid="uid://bgb2xaf423b4u" path="res://assets/visuals/fonts/retro_computer/retro_computer_personal_use.ttf" id="8_hdqte"]
 [ext_resource type="AudioStream" uid="uid://cqvnfpuyoj4i0" path="res://assets/audio/music/ending_theme.mp3" id="9_mdypk"]
 [ext_resource type="Script" uid="uid://b3hmr33bpfqsx" path="res://scenes/menus/scripts/menu_themes.gd" id="10_upht2"]
 
-[node name="EndingScreen" type="Control" unique_id=1537858029]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_30q4t"]
+bg_color = Color(0.5, 0.7166667, 1, 1)
+
+[node name="EndingScreen" type="Control" unique_id=1537858029 node_paths=PackedStringArray("titleScreenButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,6 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kpoak")
 titleScreen = ExtResource("2_ighji")
+titleScreenButton = NodePath("VBoxContainer/TitleScreen")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1119427043]
 layout_mode = 0
@@ -48,7 +51,7 @@ layout_mode = 2
 theme = ExtResource("3_tvwvb")
 theme_override_styles/normal = ExtResource("4_vm3g7")
 theme_override_styles/pressed = ExtResource("5_1ffvt")
-theme_override_styles/hover = ExtResource("6_o61ye")
+theme_override_styles/hover = SubResource("StyleBoxFlat_30q4t")
 theme_override_styles/focus = ExtResource("7_0scsa")
 text = "Title Screen
 "
@@ -97,4 +100,4 @@ stream = ExtResource("9_mdypk")
 pitch_scale = 0.8
 script = ExtResource("10_upht2")
 
-[connection signal="button_up" from="VBoxContainer/TitleScreen" to="." method="_on_quit_button_up"]
+[connection signal="button_up" from="VBoxContainer/TitleScreen" to="." method="_on_title_screen_button_up"]
