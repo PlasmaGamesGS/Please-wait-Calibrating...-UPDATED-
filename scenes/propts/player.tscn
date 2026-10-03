@@ -147,14 +147,14 @@ scale_max = 20.0
 scale_curve = SubResource("CurveTexture_wigkw")
 color_ramp = SubResource("GradientTexture1D_fdawp")
 
-[node name="Player" type="CharacterBody2D" unique_id=712633534 node_paths=PackedStringArray("animation", "area_2d", "constParticles", "instParticles", "deathParticles") groups=["characters"]]
+[node name="Player" type="CharacterBody2D" unique_id=712633534 node_paths=PackedStringArray("animation", "area_2d", "constParticles", "errorParticles", "deathParticles") groups=["characters"]]
 z_index = 1
 collision_layer = 4
 script = ExtResource("1_g2els")
 animation = NodePath("AnimatedSprite2D")
 area_2d = NodePath("Area2D")
 constParticles = NodePath("(Unused)ConstantParticles")
-instParticles = NodePath("ErrorParticles")
+errorParticles = NodePath("ErrorParticles")
 deathParticles = NodePath("DeathParticles")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=843318415]
@@ -188,6 +188,7 @@ gravity = Vector2(0, 0)
 color = Color(1, 0.49019608, 0, 1)
 
 [node name="ErrorParticles" type="GPUParticles2D" parent="." unique_id=98218317]
+visible = false
 emitting = false
 amount = 15
 one_shot = true
@@ -195,6 +196,7 @@ explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_vb86h")
 
 [node name="DeathParticles" type="GPUParticles2D" parent="." unique_id=1205282695]
+visible = false
 emitting = false
 amount = 100
 lifetime = 0.5

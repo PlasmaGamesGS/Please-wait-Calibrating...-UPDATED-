@@ -11,7 +11,7 @@ func _ready() -> void:
 	area_2d.body_entered.connect(_open)
 	area_2d.body_exited.connect(_close)
 	
-	if get_parent().get_parent()._current_level == 0:
+	if get_parent().get_parent().current_level == 0:
 		key.visible = true
 		key.play("pressing")
 
@@ -29,7 +29,7 @@ func _process(_delta: float) -> void:
 		if Input.is_action_just_pressed("openDoor"):
 			get_parent().get_parent().next_level()
 	
-	elif get_parent().get_parent()._current_level != 0:
+	elif get_parent().get_parent().current_level != 0:
 		key.visible = false
 		key.stop()
 

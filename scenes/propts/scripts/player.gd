@@ -21,12 +21,15 @@ var _new_size: float
 @export var area_2d: Area2D
 @export var EnDoorPosition: Node2D
 @export var constParticles: CPUParticles2D
-@export var instParticles: GPUParticles2D
+@export var errorParticles: GPUParticles2D
 @export var deathParticles: GPUParticles2D
 
 func _ready():
+	_partPreload()
+
 	position = EnDoorPosition.position
 	area_2d.body_entered.connect(_damaged)
+
 	if alt_gravity:
 		scale.y = - scale.y
 
@@ -101,19 +104,29 @@ func _damaged(_body: Node2D) -> void:
 	animation.visible = false
 	_alive = false
 	animation.stop()
+	deathParticles.visible = true
 	deathParticles.emitting = true
 	await get_tree().create_timer(1).timeout
 	player_died.emit()
 
 
+#preloading particles to prevent lag
+func _partPreload():
+	if get_parent().get_parent().current_level == 0:
+		errorParticles.emitting = true
+		deathParticles.emitting = true
+		errorParticles.restart()
+		deathParticles.restart()
+
 #modificador de gravedad
 func _mod_gravity():
-	instParticles.restart()
-	instParticles.self_modulate = Color("ff7d00")
-	instParticles.emitting = true
+	errorParticles.restart()
+	errorParticles.self_modulate = Color("ff7d00")
+	errorParticles.visible = true
+	errorParticles.emitting = true
 	await get_tree().create_timer(0.2).timeout
 	scale.y = - scale.y
-	instParticles.emitting = false
+	errorParticles.emitting = false
 	if !alt_gravity:
 		alt_gravity = true
 	else:
@@ -129,7 +142,8 @@ func _mod_size():
 		scale = _size
 	@warning_ignore("narrowing_conversion")
 	deathParticles.amount *= scale.x
-	instParticles.self_modulate = Color("00ff15ff")
-	instParticles.emitting = true
+	errorParticles.self_modulate = Color("00ff15ff")
+	errorParticles.visible = true
+	errorParticles.emitting = true
 	await get_tree().create_timer(0.2).timeout
-	instParticles.emitting = false
+	errorParticles.emitting = false

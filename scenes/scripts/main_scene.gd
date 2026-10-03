@@ -5,7 +5,7 @@ extends Node2D
 @export var _loop: AudioStreamPlayer2D
 @export var _under_construction: AudioStreamPlayer2D
 
-var _current_level: int = 0
+var current_level: int = 0
 var _instantiated_level: Node
 var _secret_level: bool
 
@@ -14,7 +14,7 @@ func _ready() -> void:
 	_intro.add_to_group("music")
 	_loop.add_to_group("music")
 	_under_construction.add_to_group("music")
-	_create_level(_current_level)
+	_create_level(current_level)
 
 	_intro.finished.connect(_loop.play)
 	if !_under_construction.playing:
@@ -36,21 +36,21 @@ func _delete_level():
 	
 func _restart_level():
 	_delete_level()
-	_create_level.call_deferred(_current_level)
-	if _current_level == 5:
+	_create_level.call_deferred(current_level)
+	if current_level == 5:
 		_under_construction.stop()
 		_loop.play()
 
 func next_level():
 	if _secret_level == false:
-		if _current_level == 3:
+		if current_level == 3:
 			_loop.stop()
 			_under_construction.play()
-		if _current_level == 4:
+		if current_level == 4:
 			get_tree().change_scene_to_file.call_deferred("res://scenes/menus/ending_screen.tscn")
 		else:
-			_current_level += 1
+			current_level += 1
 			_restart_level()
 	else:
-		_current_level = 5
+		current_level = 5
 		_restart_level()
