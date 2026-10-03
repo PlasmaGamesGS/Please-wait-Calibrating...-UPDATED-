@@ -1,4 +1,4 @@
-Please, wait, Calibrating... - ALPHA 0.0.2.  Update A0.0.2/08.26/rC1 - The Graphic Update
+Please, wait, Calibrating... - ALPHA 0.0.2.  Patch A0.0.2.1/10.26/rC1 - The Graphic Update (Hotfix) - The Graphic Update
 
 Hello!, this is PlasmaGames
 Thanks for downloading our game, we are really glad you did.
@@ -21,6 +21,7 @@ W - Up (Climbing up ladder)
 S - Down (Climbing down ladder, getting off platform)
 A - Walk left
 D - Walk right
+E - Open exit door
 Enter - Pause game
 {CONTROLS}
 
@@ -37,4 +38,3 @@ Adventures In Mana by Schematist | http://www.schematistmusic.com
 Royalty Free Music by https://www.free-stock-music.com
 Creative Commons / Attribution 3.0 Unported License (CC BY 3.0)
 https://creativecommons.org/licenses/by/3.0/deed.en_US
-	
