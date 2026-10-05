@@ -9,10 +9,12 @@ var current_level: int = 0
 var _instantiated_level: Node
 var _secret_level: bool
 
+var mousePos: Vector2
 
 func _ready() -> void:
+	mousePos = get_global_mouse_position()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	
+	_music()
 	_create_level(current_level)
 
 
