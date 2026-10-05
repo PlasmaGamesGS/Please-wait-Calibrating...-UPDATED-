@@ -31,6 +31,26 @@ bg_color = Color(0.5019608, 0.7176471, 1, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mbtsg"]
 bg_color = Color(0.5019608, 0.7176471, 1, 1)
 
+[sub_resource type="Theme" id="Theme_2hxrs"]
+Button/colors/font_color = Color(0.03125, 0, 1, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(0.546875, 0.5751953, 1, 1)
+Button/colors/font_pressed_color = Color(0.54509807, 0.5764706, 1, 1)
+Button/font_sizes/font_size = 96
+Button/fonts/font = ExtResource("20_5pump")
+Label/font_sizes/font_size = 112
+Label/fonts/font = ExtResource("9_kxg6u")
+
+[sub_resource type="Theme" id="Theme_mgtej"]
+Button/colors/font_color = Color(0.03125, 0, 1, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(0.546875, 0.5751953, 1, 1)
+Button/colors/font_pressed_color = Color(0.54509807, 0.5764706, 1, 1)
+Button/font_sizes/font_size = 96
+Button/fonts/font = ExtResource("20_5pump")
+Label/font_sizes/font_size = 112
+Label/fonts/font = ExtResource("9_kxg6u")
+
 [sub_resource type="Theme" id="Theme_wh4fq"]
 Button/colors/font_color = Color(0.03125, 0, 1, 1)
 Button/colors/font_focus_color = Color(1, 1, 1, 1)
@@ -127,13 +147,25 @@ theme_override_font_sizes/font_size = 180
 text = "Calibrating..."
 horizontal_alignment = 2
 
-[node name="VersionIndicator" type="Button" parent="Title" unique_id=204746289]
-layout_mode = 2
-theme = ExtResource("3_o5a1b")
+[node name="VersionIndicator" type="Button" parent="." unique_id=204746289]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -34.0
+offset_right = -48.0
+offset_bottom = 34.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = SubResource("Theme_2hxrs")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.546875, 0.5751953, 1, 1)
 theme_override_fonts/font = ExtResource("9_kxg6u")
 theme_override_font_sizes/font_size = 65
-text = "<Game Version>"
+text = "<GameVer>"
 flat = true
 alignment = 2
 script = ExtResource("7_ssxho")
@@ -148,8 +180,9 @@ offset_top = -39.0
 offset_right = 227.0
 offset_bottom = -4.0
 grow_vertical = 0
-theme = ExtResource("3_o5a1b")
+theme = SubResource("Theme_mgtej")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.546875, 0.5751953, 1, 1)
 theme_override_fonts/font = ExtResource("9_kxg6u")
 theme_override_font_sizes/font_size = 30
 text = "<Current Patch>"
@@ -405,7 +438,7 @@ flat = true
 [connection signal="button_up" from="Buttons/Play" to="." method="_on_play_button_up"]
 [connection signal="button_up" from="Buttons/Options" to="." method="_on_options_button_up"]
 [connection signal="button_up" from="Buttons/Quit" to="." method="_on_quit_button_up"]
-[connection signal="button_up" from="Title/VersionIndicator" to="." method="_on_version_indicator_button_up"]
+[connection signal="button_up" from="VersionIndicator" to="." method="_on_version_indicator_button_up"]
 [connection signal="button_up" from="CurrentPatch" to="." method="_on_patch_indicator_button_up"]
 [connection signal="button_up" from="Socials/Itch" to="." method="_on_itch_button_up"]
 [connection signal="button_up" from="Socials/GitHub" to="." method="_on_git_hub_button_up"]

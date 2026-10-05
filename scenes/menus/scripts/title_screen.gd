@@ -66,23 +66,28 @@ func _on_patch_indicator_button_up() -> void:
 	PnPopup.visible = true
 
 func _on_itch_patchnotes_button_up() -> void:
-	OS.shell_open("https://plasmagamedev.itch.io/please-wait-calibrating/devlog/1689194/patch-a00211026rc1-the-graphic-update-hotfix")
+	OS.shell_open(VersionDetails.patchNotesItch)
+	PnPopup.visible = false
 
 func _on_github_patchnotes_button_up() -> void:
-	OS.shell_open("https://github.com/PlasmaGamesGS/Please-wait-Calibrating...-UPDATED-/releases/tag/Patch_A0.0.2.1%2F10.26%2FrC1")
+	OS.shell_open(VersionDetails.patchNotesGithub)
+	PnPopup.visible = false
 
 
 func _on_version_indicator_button_up() -> void:
 	UnPopup.visible = true
 
 func _on_itch_updatenotes_button_up() -> void:
-	OS.shell_open("https://plasmagamedev.itch.io/please-wait-calibrating/devlog/1666417/update-a0020826rc1-the-graphic-update")
+	OS.shell_open(VersionDetails.updateNotesItch)
+	UnPopup.visible = false
 
 func _on_github_updatenotes_button_up() -> void:
-	OS.shell_open("https://github.com/PlasmaGamesGS/Please-wait-Calibrating...-UPDATED-/releases/tag/Alpha-0.0.2")
+	OS.shell_open(VersionDetails.updateNotesGithub)
+	UnPopup.visible = false
 
 func _on_youtube_update_trailer_button_up() -> void:
-	OS.shell_open("https://www.youtube.com/watch?v=J2DZSJhqpuY&list=PLLwvV6ShZfrc&index=1")
+	OS.shell_open(VersionDetails.youtubeTrailer)
+	UnPopup.visible = false
 
 
 func _on_close_button_up() -> void:
