@@ -11,14 +11,10 @@ var _secret_level: bool
 
 
 func _ready() -> void:
-	_intro.add_to_group("music")
-	_loop.add_to_group("music")
-	_under_construction.add_to_group("music")
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
 	_create_level(current_level)
 
-	_intro.finished.connect(_loop.play)
-	if !_under_construction.playing:
-		_loop.finished.connect(_loop.play)
 
 func _create_level(level_number: int):
 	_instantiated_level = levels[level_number].instantiate()
@@ -54,3 +50,13 @@ func next_level():
 	else:
 		current_level = 5
 		_restart_level()
+
+
+func _music():
+	_intro.add_to_group("music")
+	_loop.add_to_group("music")
+	_under_construction.add_to_group("music")
+	
+	_intro.finished.connect(_loop.play)
+	if !_under_construction.playing:
+		_loop.finished.connect(_loop.play)

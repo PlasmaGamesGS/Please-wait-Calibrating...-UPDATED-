@@ -8,24 +8,24 @@ var resValue: int = 1
 
 func _process(delta: float) -> void:
 	#DisplayServer.window_set_size(Vector2(xResolution[resValue], yResolution[resValue]))
-	ProjectSettings.set_setting("display/window/size/width",xResolution[resValue])
-	ProjectSettings.set_setting("display/window/size/height",yResolution[resValue])
-	valueX.text = str(xResolution[resValue])
-	valueY.text = str(yResolution[resValue])
+	#ProjectSettings.set_setting("display/window/size/width",xResolution[resValue])
+	#ProjectSettings.set_setting("display/window/size/height",yResolution[resValue])
+	#valueX.text = str(xResolution[resValue])
+	#valueY.text = str(yResolution[resValue])
+	pass
 
 
 func _on_back_button_up() -> void:
 	get_tree().change_scene_to_file("res://scenes/menus/title_screen.tscn")
 
 
-func _on_increase_button_down() -> void:
+func _on_increase_increase() -> void:
 	if resValue == 3:
 		resValue = 3
 	else:
 		resValue += 1
 
-
-func _on_decrease_button_down() -> void:
+func _on_decrease_decrease() -> void:
 	if resValue == 0:
 		resValue = 0
 	else:

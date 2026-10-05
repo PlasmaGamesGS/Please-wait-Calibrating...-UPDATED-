@@ -8,10 +8,40 @@
 [ext_resource type="StyleBox" uid="uid://bx68ihuqm7lyw" path="res://assets/visuals/themes/title_screen_button_focus.tres" id="7_seji6"]
 [ext_resource type="Script" uid="uid://b0psol70ju4bm" path="res://scenes/menus/scripts/version_indicator.gd" id="7_ssxho"]
 [ext_resource type="Script" uid="uid://cbghqoh63f4qv" path="res://scenes/menus/scripts/patch_indicator.gd" id="8_30q4t"]
+[ext_resource type="FontFile" uid="uid://bxevb61csv7tg" path="res://assets/visuals/fonts/computer_7/computer_7.ttf" id="9_kxg6u"]
 [ext_resource type="AudioStream" uid="uid://bm3lrkh7op6r5" path="res://assets/audio/music/title_theme.mp3" id="11_2hxrs"]
 [ext_resource type="Script" uid="uid://b3hmr33bpfqsx" path="res://scenes/menus/scripts/menu_themes.gd" id="12_mgtej"]
+[ext_resource type="Texture2D" uid="uid://b2ucc7g74nw2t" path="res://assets/sprites/icons/socials/itch.png" id="12_og6oq"]
+[ext_resource type="Texture2D" uid="uid://das8glx78hhac" path="res://assets/sprites/icons/socials/github.png" id="12_seji6"]
+[ext_resource type="Texture2D" uid="uid://c4iygqos4rnb8" path="res://assets/sprites/icons/socials/patreon.png" id="13_kxg6u"]
+[ext_resource type="Texture2D" uid="uid://bb5wfw08vacj6" path="res://assets/sprites/icons/socials/kickstarter.png" id="14_5pump"]
+[ext_resource type="Texture2D" uid="uid://2okfdspw5vfg" path="res://assets/sprites/icons/socials/youtube.png" id="15_wh4fq"]
+[ext_resource type="Texture2D" uid="uid://d0anv67k5qonf" path="res://assets/sprites/icons/socials/x.png" id="16_2hxrs"]
+[ext_resource type="Texture2D" uid="uid://sr406qd35fn6" path="res://assets/sprites/icons/socials/tiktok.png" id="17_mgtej"]
+[ext_resource type="Texture2D" uid="uid://bqmehrwui5y5e" path="res://assets/sprites/icons/socials/instagram.png" id="18_fh0ye"]
+[ext_resource type="FontFile" uid="uid://bwstdhnpr7i77" path="res://assets/visuals/fonts/computerfont/Computerfont.ttf" id="20_5pump"]
+[ext_resource type="Texture2D" uid="uid://ccdbk6isqkfxs" path="res://assets/sprites/icons/close.png" id="21_wh4fq"]
 
-[node name="TitleScreen" type="Control" unique_id=1803619200 node_paths=PackedStringArray("playButton", "quitButton")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gquoy"]
+bg_color = Color(0.5019608, 0.7176471, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vrg4o"]
+bg_color = Color(0.5019608, 0.7176471, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mbtsg"]
+bg_color = Color(0.5019608, 0.7176471, 1, 1)
+
+[sub_resource type="Theme" id="Theme_wh4fq"]
+Button/colors/font_color = Color(0.03125, 0, 1, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 96
+Button/fonts/font = ExtResource("20_5pump")
+Label/font_sizes/font_size = 75
+Label/fonts/font = ExtResource("9_kxg6u")
+
+[node name="TitleScreen" type="Control" unique_id=1803619200 node_paths=PackedStringArray("playButton", "quitButton", "PnPopup", "UnPopup")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,6 +52,8 @@ script = ExtResource("1_gquoy")
 main_scene = ExtResource("2_4tc24")
 playButton = NodePath("Buttons/Play")
 quitButton = NodePath("Buttons/Quit")
+PnPopup = NodePath("Patchnotes Popup")
+UnPopup = NodePath("Updatenotes Popup")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2073392845]
 layout_mode = 0
@@ -47,6 +79,7 @@ layout_mode = 2
 theme = ExtResource("3_o5a1b")
 theme_override_styles/normal = ExtResource("4_mvo1e")
 theme_override_styles/pressed = ExtResource("5_gfg51")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gquoy")
 theme_override_styles/focus = ExtResource("7_seji6")
 text = "Play"
 
@@ -55,6 +88,7 @@ layout_mode = 2
 theme = ExtResource("3_o5a1b")
 theme_override_styles/normal = ExtResource("4_mvo1e")
 theme_override_styles/pressed = ExtResource("5_gfg51")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vrg4o")
 theme_override_styles/focus = ExtResource("7_seji6")
 text = "Options"
 
@@ -63,6 +97,7 @@ layout_mode = 2
 theme = ExtResource("3_o5a1b")
 theme_override_styles/normal = ExtResource("4_mvo1e")
 theme_override_styles/pressed = ExtResource("5_gfg51")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mbtsg")
 theme_override_styles/focus = ExtResource("7_seji6")
 text = "Quit"
 autowrap_trim_flags = 192
@@ -92,31 +127,33 @@ theme_override_font_sizes/font_size = 180
 text = "Calibrating..."
 horizontal_alignment = 2
 
-[node name="VersionIndicator" type="Label" parent="Title" unique_id=1371915712]
+[node name="VersionIndicator" type="Button" parent="Title" unique_id=204746289]
 layout_mode = 2
 theme = ExtResource("3_o5a1b")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_kxg6u")
 theme_override_font_sizes/font_size = 65
 text = "<Game Version>"
-horizontal_alignment = 2
+flat = true
+alignment = 2
 script = ExtResource("7_ssxho")
 
-[node name="CurrentPatch" type="BoxContainer" parent="." unique_id=2048968483]
+[node name="CurrentPatch" type="Button" parent="." unique_id=455566846]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 7.0
-offset_top = -31.0
-offset_right = 210.0
+offset_left = 16.0
+offset_top = -39.0
+offset_right = 227.0
 offset_bottom = -4.0
 grow_vertical = 0
-alignment = 2
-
-[node name="PatchIndicator" type="Label" parent="CurrentPatch" unique_id=1030003890]
-layout_mode = 2
 theme = ExtResource("3_o5a1b")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_kxg6u")
 theme_override_font_sizes/font_size = 30
 text = "<Current Patch>"
+flat = true
 script = ExtResource("8_30q4t")
 
 [node name="TitleTheme" type="AudioStreamPlayer2D" parent="." unique_id=725490295]
@@ -124,6 +161,264 @@ stream = ExtResource("11_2hxrs")
 pitch_scale = 1.2
 script = ExtResource("12_mgtej")
 
+[node name="Socials" type="HBoxContainer" parent="." unique_id=733376754]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -505.0
+offset_top = -50.0
+offset_right = -73.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.160001, 1.160001)
+theme_override_constants/separation = 16
+
+[node name="Itch" type="Button" parent="Socials" unique_id=667636746]
+layout_mode = 2
+icon = ExtResource("12_og6oq")
+flat = true
+
+[node name="GitHub" type="Button" parent="Socials" unique_id=1041098800]
+layout_mode = 2
+icon = ExtResource("12_seji6")
+flat = true
+
+[node name="Patreon" type="Button" parent="Socials" unique_id=1989225624]
+layout_mode = 2
+icon = ExtResource("13_kxg6u")
+flat = true
+
+[node name="Kickstarter" type="Button" parent="Socials" unique_id=708507355]
+layout_mode = 2
+icon = ExtResource("14_5pump")
+flat = true
+
+[node name="YouTube" type="Button" parent="Socials" unique_id=1840360555]
+layout_mode = 2
+icon = ExtResource("15_wh4fq")
+flat = true
+
+[node name="X" type="Button" parent="Socials" unique_id=2072107806]
+layout_mode = 2
+icon = ExtResource("16_2hxrs")
+flat = true
+
+[node name="TikTok" type="Button" parent="Socials" unique_id=222812293]
+layout_mode = 2
+icon = ExtResource("17_mgtej")
+flat = true
+
+[node name="Instagram" type="Button" parent="Socials" unique_id=620881931]
+layout_mode = 2
+icon = ExtResource("18_fh0ye")
+flat = true
+
+[node name="Patchnotes Popup" type="Control" parent="." unique_id=2031315132]
+visible = false
+layout_mode = 1
+anchor_left = 0.141
+anchor_top = 0.162
+anchor_right = 0.141
+anchor_bottom = 0.162
+offset_left = 0.56799316
+offset_top = 0.024002075
+offset_right = 790.568
+offset_bottom = 444.024
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Patchnotes Popup" unique_id=575739053]
+z_index = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -383.5
+offset_top = -8.0
+offset_right = 359.5
+offset_bottom = 94.0
+grow_horizontal = 2
+theme = SubResource("Theme_wh4fq")
+text = "Show Patchnotes in:"
+vertical_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="Patchnotes Popup" unique_id=1011148081]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -395.0
+offset_top = -222.0
+offset_right = -394.3142
+offset_bottom = -221.31424
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1152, 648)
+color = Color(0, 0.765625, 1, 1)
+
+[node name="Options" type="HBoxContainer" parent="Patchnotes Popup" unique_id=2130981730]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -110.0
+offset_right = -231.00002
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7.1999993, 7.1999993)
+
+[node name="Itch" type="Button" parent="Patchnotes Popup/Options" unique_id=984519136]
+layout_mode = 2
+icon = ExtResource("12_og6oq")
+flat = true
+
+[node name="GitHub" type="Button" parent="Patchnotes Popup/Options" unique_id=873110035]
+layout_mode = 2
+icon = ExtResource("12_seji6")
+flat = true
+
+[node name="Close" type="Button" parent="Patchnotes Popup" unique_id=1621249097]
+layout_mode = 0
+offset_left = 692.00006
+offset_top = 1.0
+offset_right = 716.00006
+offset_bottom = 25.0
+scale = Vector2(4.0722547, 4.0722547)
+icon = ExtResource("21_wh4fq")
+flat = true
+
+[node name="Updatenotes Popup" type="Control" parent="." unique_id=1650282149]
+visible = false
+layout_mode = 1
+anchor_left = 0.141
+anchor_top = 0.162
+anchor_right = 0.141
+anchor_bottom = 0.162
+offset_left = 0.56799316
+offset_top = 0.024002075
+offset_right = 790.568
+offset_bottom = 444.024
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Updatenotes Popup" unique_id=1304385711]
+z_index = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -383.5
+offset_top = -8.0
+offset_right = 359.5
+offset_bottom = 94.0
+grow_horizontal = 2
+theme = SubResource("Theme_wh4fq")
+text = "Show Updatenotes in:"
+vertical_alignment = 2
+
+[node name="(Trailer)" type="Label" parent="Updatenotes Popup" unique_id=198764584]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.67300004
+anchor_top = 0.84700006
+anchor_right = 0.67300004
+anchor_bottom = 0.84700006
+offset_left = 3.329956
+offset_top = 2.9319763
+offset_right = 229.32996
+offset_bottom = 63.931976
+grow_horizontal = 0
+grow_vertical = 0
+theme = SubResource("Theme_wh4fq")
+theme_override_font_sizes/font_size = 66
+text = "(Trailer)"
+vertical_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="Updatenotes Popup" unique_id=554730158]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -395.0
+offset_top = -222.0
+offset_right = -394.3142
+offset_bottom = -221.31424
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1152, 648)
+color = Color(0, 0.765625, 1, 1)
+
+[node name="Options" type="HBoxContainer" parent="Updatenotes Popup" unique_id=1799177453]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -396.0
+offset_top = -110.0
+offset_right = -268.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(7.1999993, 7.1999993)
+theme_override_constants/separation = -5
+
+[node name="Itch" type="Button" parent="Updatenotes Popup/Options" unique_id=939780665]
+layout_mode = 2
+icon = ExtResource("12_og6oq")
+flat = true
+
+[node name="GitHub" type="Button" parent="Updatenotes Popup/Options" unique_id=530933947]
+layout_mode = 2
+icon = ExtResource("12_seji6")
+flat = true
+
+[node name="YouTube" type="Button" parent="Updatenotes Popup/Options" unique_id=725266725]
+layout_mode = 2
+icon = ExtResource("15_wh4fq")
+flat = true
+
+[node name="Close" type="Button" parent="Updatenotes Popup" unique_id=1227631042]
+layout_mode = 0
+offset_left = 692.00006
+offset_top = 1.0
+offset_right = 716.00006
+offset_bottom = 25.0
+scale = Vector2(4.0722547, 4.0722547)
+icon = ExtResource("21_wh4fq")
+flat = true
+
 [connection signal="button_up" from="Buttons/Play" to="." method="_on_play_button_up"]
 [connection signal="button_up" from="Buttons/Options" to="." method="_on_options_button_up"]
 [connection signal="button_up" from="Buttons/Quit" to="." method="_on_quit_button_up"]
+[connection signal="button_up" from="Title/VersionIndicator" to="." method="_on_version_indicator_button_up"]
+[connection signal="button_up" from="CurrentPatch" to="." method="_on_patch_indicator_button_up"]
+[connection signal="button_up" from="Socials/Itch" to="." method="_on_itch_button_up"]
+[connection signal="button_up" from="Socials/GitHub" to="." method="_on_git_hub_button_up"]
+[connection signal="button_up" from="Socials/Patreon" to="." method="_on_patreon_button_up"]
+[connection signal="button_up" from="Socials/Kickstarter" to="." method="_on_kickstarter_button_up"]
+[connection signal="button_up" from="Socials/YouTube" to="." method="_on_youtube_button_up"]
+[connection signal="button_up" from="Socials/X" to="." method="_on_x_button_up"]
+[connection signal="button_up" from="Socials/TikTok" to="." method="_on_tiktok_button_up"]
+[connection signal="button_up" from="Socials/Instagram" to="." method="_on_instagram_button_up"]
+[connection signal="button_up" from="Patchnotes Popup/Options/Itch" to="." method="_on_itch_patchnotes_button_up"]
+[connection signal="button_up" from="Patchnotes Popup/Options/GitHub" to="." method="_on_github_patchnotes_button_up"]
+[connection signal="button_up" from="Patchnotes Popup/Close" to="." method="_on_close_button_up"]
+[connection signal="button_up" from="Updatenotes Popup/Options/Itch" to="." method="_on_itch_updatenotes_button_up"]
+[connection signal="button_up" from="Updatenotes Popup/Options/GitHub" to="." method="_on_github_updatenotes_button_up"]
+[connection signal="button_up" from="Updatenotes Popup/Options/YouTube" to="." method="_on_youtube_update_trailer_button_up"]
+[connection signal="button_up" from="Updatenotes Popup/Close" to="." method="_on_close_button_up"]
