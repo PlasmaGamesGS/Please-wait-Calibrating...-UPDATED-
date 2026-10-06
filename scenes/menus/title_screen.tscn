@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://da4otwkduuutj" path="res://scenes/menus/scripts/title_screen.gd" id="1_gquoy"]
 [ext_resource type="PackedScene" uid="uid://cbwkgt6imvh8n" path="res://scenes/main_scene.tscn" id="2_4tc24"]
 [ext_resource type="Theme" uid="uid://d3qso5yw6drip" path="res://assets/visuals/themes/title_screen_theme.tres" id="3_o5a1b"]
-[ext_resource type="StyleBox" uid="uid://ysilah71lpef" path="res://assets/visuals/themes/title_screen_button_normal.tres" id="4_mvo1e"]
-[ext_resource type="StyleBox" uid="uid://dd1mw22e4yjl3" path="res://assets/visuals/themes/title_screen_button_pressed.tres" id="5_gfg51"]
-[ext_resource type="StyleBox" uid="uid://bx68ihuqm7lyw" path="res://assets/visuals/themes/title_screen_button_focus.tres" id="7_seji6"]
+[ext_resource type="Texture2D" uid="uid://bpbig8d13u3l7" path="res://assets/sprites/icons/buttons/title screen/button_play.png" id="7_fh0ye"]
 [ext_resource type="Script" uid="uid://b0psol70ju4bm" path="res://scenes/menus/scripts/version_indicator.gd" id="7_ssxho"]
 [ext_resource type="Script" uid="uid://cbghqoh63f4qv" path="res://scenes/menus/scripts/patch_indicator.gd" id="8_30q4t"]
+[ext_resource type="Texture2D" uid="uid://cwrwaurtjlsgs" path="res://assets/sprites/icons/buttons/title screen/button_options.png" id="8_nmxtj"]
+[ext_resource type="Texture2D" uid="uid://morxjkqvqrgv" path="res://assets/sprites/icons/buttons/title screen/button_quit.png" id="9_i5hl8"]
 [ext_resource type="FontFile" uid="uid://bxevb61csv7tg" path="res://assets/visuals/fonts/computer_7/computer_7.ttf" id="9_kxg6u"]
 [ext_resource type="AudioStream" uid="uid://bm3lrkh7op6r5" path="res://assets/audio/music/title_theme.mp3" id="11_2hxrs"]
 [ext_resource type="Script" uid="uid://b3hmr33bpfqsx" path="res://scenes/menus/scripts/menu_themes.gd" id="12_mgtej"]
@@ -22,14 +22,164 @@
 [ext_resource type="FontFile" uid="uid://bwstdhnpr7i77" path="res://assets/visuals/fonts/computerfont/Computerfont.ttf" id="20_5pump"]
 [ext_resource type="Texture2D" uid="uid://ccdbk6isqkfxs" path="res://assets/sprites/icons/close.png" id="21_wh4fq"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gquoy"]
-bg_color = Color(0.5019608, 0.7176471, 1, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wh4fq"]
+atlas = ExtResource("7_fh0ye")
+region = Rect2(0, 32, 64, 32)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vrg4o"]
-bg_color = Color(0.5019608, 0.7176471, 1, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hxrs"]
+atlas = ExtResource("7_fh0ye")
+region = Rect2(0, 64, 64, 32)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mbtsg"]
-bg_color = Color(0.5019608, 0.7176471, 1, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlsnj"]
+atlas = ExtResource("7_fh0ye")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgtej"]
+atlas = ExtResource("7_fh0ye")
+region = Rect2(0, 96, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fh0ye"]
+atlas = ExtResource("7_fh0ye")
+region = Rect2(0, 128, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vb86h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wh4fq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hxrs")
+}],
+"loop": 1,
+"name": &"hover",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlsnj")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgtej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fh0ye")
+}],
+"loop": 1,
+"name": &"press",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmxtj"]
+atlas = ExtResource("8_nmxtj")
+region = Rect2(0, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5hl8"]
+atlas = ExtResource("8_nmxtj")
+region = Rect2(0, 64, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1j8e7"]
+atlas = ExtResource("8_nmxtj")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tab7i"]
+atlas = ExtResource("8_nmxtj")
+region = Rect2(0, 96, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyrvi"]
+atlas = ExtResource("8_nmxtj")
+region = Rect2(0, 128, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hq3h5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmxtj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5hl8")
+}],
+"loop": 1,
+"name": &"hover",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1j8e7")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tab7i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyrvi")
+}],
+"loop": 1,
+"name": &"press",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60161"]
+atlas = ExtResource("9_i5hl8")
+region = Rect2(0, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jq1fc"]
+atlas = ExtResource("9_i5hl8")
+region = Rect2(0, 64, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8rki"]
+atlas = ExtResource("9_i5hl8")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_biuhn"]
+atlas = ExtResource("9_i5hl8")
+region = Rect2(0, 96, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwnwy"]
+atlas = ExtResource("9_i5hl8")
+region = Rect2(0, 128, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rph3h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60161")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jq1fc")
+}],
+"loop": 1,
+"name": &"hover",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8rki")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_biuhn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwnwy")
+}],
+"loop": 1,
+"name": &"press",
+"speed": 5.0
+}]
 
 [sub_resource type="Theme" id="Theme_2hxrs"]
 Button/colors/font_color = Color(0.03125, 0, 1, 1)
@@ -61,7 +211,7 @@ Button/fonts/font = ExtResource("20_5pump")
 Label/font_sizes/font_size = 75
 Label/fonts/font = ExtResource("9_kxg6u")
 
-[node name="TitleScreen" type="Control" unique_id=1803619200 node_paths=PackedStringArray("playButton", "quitButton", "PnPopup", "UnPopup")]
+[node name="TitleScreen" type="Control" unique_id=1803619200 node_paths=PackedStringArray("playButton", "optionsButton", "quitButton", "PnPopup", "UnPopup", "playSprite", "optionsSprite", "quitSprite")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -70,10 +220,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gquoy")
 main_scene = ExtResource("2_4tc24")
-playButton = NodePath("Buttons/Play")
-quitButton = NodePath("Buttons/Quit")
+playButton = NodePath("Buttons/Play/PlayButton")
+optionsButton = NodePath("Buttons/Options/OptionsButton")
+quitButton = NodePath("Buttons/Quit/QuitButton")
 PnPopup = NodePath("Patchnotes Popup")
 UnPopup = NodePath("Updatenotes Popup")
+playSprite = NodePath("Buttons/Play")
+optionsSprite = NodePath("Buttons/Options")
+quitSprite = NodePath("Buttons/Quit")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2073392845]
 layout_mode = 0
@@ -94,32 +248,53 @@ offset_bottom = 294.0
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="Play" type="Button" parent="Buttons" unique_id=427691961]
-layout_mode = 2
-theme = ExtResource("3_o5a1b")
-theme_override_styles/normal = ExtResource("4_mvo1e")
-theme_override_styles/pressed = ExtResource("5_gfg51")
-theme_override_styles/hover = SubResource("StyleBoxFlat_gquoy")
-theme_override_styles/focus = ExtResource("7_seji6")
-text = "Play"
+[node name="Play" type="AnimatedSprite2D" parent="Buttons" unique_id=2037155981]
+position = Vector2(95.999985, 48)
+scale = Vector2(2.9999995, 2.9999995)
+sprite_frames = SubResource("SpriteFrames_vb86h")
+animation = &"hover"
+autoplay = "idle"
+frame_progress = 0.2514974
 
-[node name="Options" type="Button" parent="Buttons" unique_id=996637918]
-layout_mode = 2
-theme = ExtResource("3_o5a1b")
-theme_override_styles/normal = ExtResource("4_mvo1e")
-theme_override_styles/pressed = ExtResource("5_gfg51")
-theme_override_styles/hover = SubResource("StyleBoxFlat_vrg4o")
-theme_override_styles/focus = ExtResource("7_seji6")
-text = "Options"
+[node name="PlayButton" type="Button" parent="Buttons/Play" unique_id=427691961]
+z_index = 1
+offset_left = -32.0
+offset_top = -16.0
+offset_right = 32.000015
+offset_bottom = 15.666672
+flat = true
 
-[node name="Quit" type="Button" parent="Buttons" unique_id=1126209512]
-layout_mode = 2
-theme = ExtResource("3_o5a1b")
-theme_override_styles/normal = ExtResource("4_mvo1e")
-theme_override_styles/pressed = ExtResource("5_gfg51")
-theme_override_styles/hover = SubResource("StyleBoxFlat_mbtsg")
-theme_override_styles/focus = ExtResource("7_seji6")
-text = "Quit"
+[node name="Options" type="AnimatedSprite2D" parent="Buttons" unique_id=815559620]
+position = Vector2(96, 164)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_hq3h5")
+animation = &"hover"
+autoplay = "idle"
+frame = 1
+frame_progress = 0.92067295
+
+[node name="OptionsButton" type="Button" parent="Buttons/Options" unique_id=996637918]
+z_index = 1
+offset_left = -32.0
+offset_top = -16.000008
+offset_right = 32.0
+offset_bottom = 16.000008
+flat = true
+
+[node name="Quit" type="AnimatedSprite2D" parent="Buttons" unique_id=1129942560]
+position = Vector2(96.00001, 280)
+scale = Vector2(3.0000002, 3.0000002)
+sprite_frames = SubResource("SpriteFrames_rph3h")
+animation = &"hover"
+autoplay = "idle"
+
+[node name="QuitButton" type="Button" parent="Buttons/Quit" unique_id=1126209512]
+z_index = 1
+offset_left = -31.999998
+offset_top = -16.0
+offset_right = 31.999994
+offset_bottom = 16.0
+flat = true
 autowrap_trim_flags = 192
 
 [node name="Title" type="VBoxContainer" parent="." unique_id=1671395099]
@@ -435,9 +610,10 @@ scale = Vector2(4.0722547, 4.0722547)
 icon = ExtResource("21_wh4fq")
 flat = true
 
-[connection signal="button_up" from="Buttons/Play" to="." method="_on_play_button_up"]
-[connection signal="button_up" from="Buttons/Options" to="." method="_on_options_button_up"]
-[connection signal="button_up" from="Buttons/Quit" to="." method="_on_quit_button_up"]
+[connection signal="button_up" from="Buttons/Play/PlayButton" to="." method="_on_play_button_up"]
+[connection signal="mouse_entered" from="Buttons/Play/PlayButton" to="." method="_on_play_button_mouse_entered"]
+[connection signal="button_up" from="Buttons/Options/OptionsButton" to="." method="_on_options_button_up"]
+[connection signal="button_up" from="Buttons/Quit/QuitButton" to="." method="_on_quit_button_up"]
 [connection signal="button_up" from="VersionIndicator" to="." method="_on_version_indicator_button_up"]
 [connection signal="button_up" from="CurrentPatch" to="." method="_on_patch_indicator_button_up"]
 [connection signal="button_up" from="Socials/Itch" to="." method="_on_itch_button_up"]

@@ -1,24 +1,49 @@
 extends Control
 
 @export var main_scene: PackedScene
+
 @export var playButton: Button
+@export var optionsButton: Button
 @export var quitButton: Button
+
 @export var PnPopup: Control
 @export var UnPopup: Control
+
+@export var playSprite: AnimatedSprite2D
+@export var optionsSprite: AnimatedSprite2D
+@export var quitSprite: AnimatedSprite2D
 
 #func _ready() -> void:
 	#playButton.grab_focus()
 #
-#func _process(_delta: float) -> void:
-	#_buttons()
+func _process(_delta: float) -> void:
+	_buttons()
 #
 #
-#func _buttons():
-	#if playButton.has_focus():
+func _buttons():
+	if playButton.button_pressed:
+		playSprite.animation = "press"
+	elif playButton.has_focus() or playButton.is_hovered():
+		playSprite.animation = "hover"
+	else:
+		playSprite.animation = "idle"
 		#await get_tree().create_timer(0.1).timeout
 		#if Input.is_action_just_pressed("ui_up"):
 			#quitButton.grab_focus()
-	#if quitButton.has_focus():
+	
+	if optionsButton.button_pressed:
+		optionsSprite.animation = "press"
+	elif optionsButton.has_focus() or optionsButton.is_hovered():
+		optionsSprite.animation = "hover"
+	else:
+		optionsSprite.animation = "idle"
+	
+	if quitButton.button_pressed:
+		quitSprite.animation = "press"
+	elif quitButton.has_focus() or quitButton.is_hovered():
+		quitSprite.animation = "hover"
+	else:
+		quitSprite.animation = "idle"
 		#await get_tree().create_timer(0.1).timeout
 		#if Input.is_action_just_pressed("ui_down"):
 			#playButton.grab_focus()
