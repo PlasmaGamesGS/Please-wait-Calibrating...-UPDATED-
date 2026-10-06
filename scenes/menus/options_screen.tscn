@@ -61,7 +61,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="OptionsScreen" type="Control" unique_id=1803619200]
+[node name="OptionsScreen" type="Control" unique_id=1803619200 node_paths=PackedStringArray("bg")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,6 +69,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_th8c0")
+bg = NodePath("ColorRect")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2073392845]
 layout_mode = 0
