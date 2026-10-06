@@ -11,14 +11,14 @@
 [ext_resource type="FontFile" uid="uid://bxevb61csv7tg" path="res://assets/visuals/fonts/computer_7/computer_7.ttf" id="9_kxg6u"]
 [ext_resource type="AudioStream" uid="uid://bm3lrkh7op6r5" path="res://assets/audio/music/title_theme.mp3" id="11_2hxrs"]
 [ext_resource type="Script" uid="uid://b3hmr33bpfqsx" path="res://scenes/menus/scripts/menu_themes.gd" id="12_mgtej"]
-[ext_resource type="Texture2D" uid="uid://b2ucc7g74nw2t" path="res://assets/sprites/icons/socials/itch.png" id="12_og6oq"]
-[ext_resource type="Texture2D" uid="uid://das8glx78hhac" path="res://assets/sprites/icons/socials/github.png" id="12_seji6"]
-[ext_resource type="Texture2D" uid="uid://c4iygqos4rnb8" path="res://assets/sprites/icons/socials/patreon.png" id="13_kxg6u"]
-[ext_resource type="Texture2D" uid="uid://bb5wfw08vacj6" path="res://assets/sprites/icons/socials/kickstarter.png" id="14_5pump"]
-[ext_resource type="Texture2D" uid="uid://2okfdspw5vfg" path="res://assets/sprites/icons/socials/youtube.png" id="15_wh4fq"]
-[ext_resource type="Texture2D" uid="uid://d0anv67k5qonf" path="res://assets/sprites/icons/socials/x.png" id="16_2hxrs"]
-[ext_resource type="Texture2D" uid="uid://sr406qd35fn6" path="res://assets/sprites/icons/socials/tiktok.png" id="17_mgtej"]
-[ext_resource type="Texture2D" uid="uid://bqmehrwui5y5e" path="res://assets/sprites/icons/socials/instagram.png" id="18_fh0ye"]
+[ext_resource type="Texture2D" uid="uid://1fytsayp6emt" path="res://assets/sprites/icons/socials/social_itch.io.png" id="13_mgtej"]
+[ext_resource type="Texture2D" uid="uid://b65vqloh0vmpp" path="res://assets/sprites/icons/socials/social_github.png" id="14_fh0ye"]
+[ext_resource type="Texture2D" uid="uid://dmbeg8e7kf8wv" path="res://assets/sprites/icons/socials/social_patreon.png" id="15_nmxtj"]
+[ext_resource type="Texture2D" uid="uid://cw3708qblu30c" path="res://assets/sprites/icons/socials/social_kickstarter.png" id="16_i5hl8"]
+[ext_resource type="Texture2D" uid="uid://bexblf82rfcsx" path="res://assets/sprites/icons/socials/social_youtube.png" id="17_hlsnj"]
+[ext_resource type="Texture2D" uid="uid://ck8ri8q3rd2uv" path="res://assets/sprites/icons/socials/social_tiktok.png" id="18_tab7i"]
+[ext_resource type="Texture2D" uid="uid://bjuws22jfawag" path="res://assets/sprites/icons/socials/social_x.png" id="18_wh4fq"]
+[ext_resource type="Texture2D" uid="uid://biedx8iqvixi4" path="res://assets/sprites/icons/socials/social_instagram.png" id="19_iyrvi"]
 [ext_resource type="FontFile" uid="uid://bwstdhnpr7i77" path="res://assets/visuals/fonts/computerfont/Computerfont.ttf" id="20_5pump"]
 [ext_resource type="Texture2D" uid="uid://ccdbk6isqkfxs" path="res://assets/sprites/icons/close.png" id="21_wh4fq"]
 
@@ -201,6 +201,182 @@ Button/fonts/font = ExtResource("20_5pump")
 Label/font_sizes/font_size = 112
 Label/fonts/font = ExtResource("9_kxg6u")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_f76op"]
+atlas = ExtResource("13_mgtej")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_te8ua"]
+atlas = ExtResource("13_mgtej")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ff6kx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f76op")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_te8ua")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2x6t"]
+atlas = ExtResource("14_fh0ye")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkk7o"]
+atlas = ExtResource("14_fh0ye")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ec4yk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2x6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkk7o")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h473l"]
+atlas = ExtResource("15_nmxtj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpqem"]
+atlas = ExtResource("15_nmxtj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bs5hn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h473l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpqem")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t4qp"]
+atlas = ExtResource("16_i5hl8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whuh5"]
+atlas = ExtResource("16_i5hl8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fs26w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t4qp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whuh5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_asbik"]
+atlas = ExtResource("17_hlsnj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alf0y"]
+atlas = ExtResource("17_hlsnj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mlcvw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_asbik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alf0y")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6icgb"]
+atlas = ExtResource("18_wh4fq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxto4"]
+atlas = ExtResource("18_wh4fq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_61p1n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6icgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxto4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg4qh"]
+atlas = ExtResource("18_tab7i")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yid5"]
+atlas = ExtResource("18_tab7i")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uouio"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg4qh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yid5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phg2h"]
+atlas = ExtResource("19_iyrvi")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_puy2e"]
+atlas = ExtResource("19_iyrvi")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h4xic"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phg2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_puy2e")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="Theme" id="Theme_wh4fq"]
 Button/colors/font_color = Color(0.03125, 0, 1, 1)
 Button/colors/font_focus_color = Color(1, 1, 1, 1)
@@ -211,7 +387,7 @@ Button/fonts/font = ExtResource("20_5pump")
 Label/font_sizes/font_size = 75
 Label/fonts/font = ExtResource("9_kxg6u")
 
-[node name="TitleScreen" type="Control" unique_id=1803619200 node_paths=PackedStringArray("playButton", "optionsButton", "quitButton", "PnPopup", "UnPopup", "playSprite", "optionsSprite", "quitSprite")]
+[node name="TitleScreen" type="Control" unique_id=1803619200 node_paths=PackedStringArray("playButton", "optionsButton", "quitButton", "itch", "itchPatch", "itchUpdate", "github", "githubPatch", "githubUpdate", "patreon", "kickstarter", "youtube", "youtubeTrailer", "x", "tiktok", "instagram", "PnPopup", "UnPopup", "playSprite", "optionsSprite", "quitSprite")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -223,6 +399,19 @@ main_scene = ExtResource("2_4tc24")
 playButton = NodePath("Buttons/Play/PlayButton")
 optionsButton = NodePath("Buttons/Options/OptionsButton")
 quitButton = NodePath("Buttons/Quit/QuitButton")
+itch = NodePath("Socials/Itch/ItchButton")
+itchPatch = NodePath("Patchnotes Popup/Options/Itch/ItchButton")
+itchUpdate = NodePath("Updatenotes Popup/Options/Itch/ItchButton")
+github = NodePath("Socials/GitHub/GitHubButton")
+githubPatch = NodePath("Patchnotes Popup/Options/GitHub/GitHubButton")
+githubUpdate = NodePath("Updatenotes Popup/Options/GitHub/GitHubButton")
+patreon = NodePath("Socials/Patreon/PatreonButton")
+kickstarter = NodePath("Socials/Kickstarter/KickstarterButton")
+youtube = NodePath("Socials/YouTube/YouTubeButton")
+youtubeTrailer = NodePath("Updatenotes Popup/Options/YouTube/YouTubeButton")
+x = NodePath("Socials/X/XButton")
+tiktok = NodePath("Socials/TikTok/TikTokButton")
+instagram = NodePath("Socials/Instagram/InstagramButton")
 PnPopup = NodePath("Patchnotes Popup")
 UnPopup = NodePath("Updatenotes Popup")
 playSprite = NodePath("Buttons/Play")
@@ -385,44 +574,92 @@ grow_vertical = 0
 scale = Vector2(1.160001, 1.160001)
 theme_override_constants/separation = 16
 
-[node name="Itch" type="Button" parent="Socials" unique_id=667636746]
-layout_mode = 2
-icon = ExtResource("12_og6oq")
+[node name="Itch" type="AnimatedSprite2D" parent="Socials" unique_id=2024240095]
+position = Vector2(19.827759, 20.689697)
+sprite_frames = SubResource("SpriteFrames_ff6kx")
+
+[node name="ItchButton" type="Button" parent="Socials/Itch" unique_id=951655624]
+offset_left = -17.241585
+offset_top = -17.24142
+offset_right = 16.379143
+offset_bottom = 17.241306
 flat = true
 
-[node name="GitHub" type="Button" parent="Socials" unique_id=1041098800]
-layout_mode = 2
-icon = ExtResource("12_seji6")
+[node name="GitHub" type="AnimatedSprite2D" parent="Socials" unique_id=195232725]
+position = Vector2(75.00012, 20.689697)
+sprite_frames = SubResource("SpriteFrames_ec4yk")
+
+[node name="GitHubButton" type="Button" parent="Socials/GitHub" unique_id=66765195]
+offset_left = -17.241577
+offset_top = -17.241577
+offset_right = 17.24115
+offset_bottom = 17.24115
 flat = true
 
-[node name="Patreon" type="Button" parent="Socials" unique_id=1989225624]
-layout_mode = 2
-icon = ExtResource("13_kxg6u")
+[node name="Patreon" type="AnimatedSprite2D" parent="Socials" unique_id=308813596]
+position = Vector2(130.17249, 20.689697)
+sprite_frames = SubResource("SpriteFrames_bs5hn")
+
+[node name="PatreonButton" type="Button" parent="Socials/Patreon" unique_id=1989225624]
+offset_left = -17.241573
+offset_top = -17.241447
+offset_right = 17.241154
+offset_bottom = 17.58619
 flat = true
 
-[node name="Kickstarter" type="Button" parent="Socials" unique_id=708507355]
-layout_mode = 2
-icon = ExtResource("14_5pump")
+[node name="Kickstarter" type="AnimatedSprite2D" parent="Socials" unique_id=1002615642]
+position = Vector2(185.34485, 20.689697)
+sprite_frames = SubResource("SpriteFrames_fs26w")
+
+[node name="KickstarterButton" type="Button" parent="Socials/Kickstarter" unique_id=708507355]
+offset_left = -17.241573
+offset_top = -17.241386
+offset_right = 17.241154
+offset_bottom = 17.58619
 flat = true
 
-[node name="YouTube" type="Button" parent="Socials" unique_id=1840360555]
-layout_mode = 2
-icon = ExtResource("15_wh4fq")
+[node name="YouTube" type="AnimatedSprite2D" parent="Socials" unique_id=2093777191]
+position = Vector2(240.51721, 20.689697)
+sprite_frames = SubResource("SpriteFrames_mlcvw")
+
+[node name="YouTubeButton" type="Button" parent="Socials/YouTube" unique_id=1840360555]
+offset_left = -17.241573
+offset_top = -17.241447
+offset_right = 17.241154
+offset_bottom = 17.24134
 flat = true
 
-[node name="X" type="Button" parent="Socials" unique_id=2072107806]
-layout_mode = 2
-icon = ExtResource("16_2hxrs")
+[node name="X" type="AnimatedSprite2D" parent="Socials" unique_id=1721462469]
+position = Vector2(295.68958, 20.689697)
+sprite_frames = SubResource("SpriteFrames_61p1n")
+
+[node name="XButton" type="Button" parent="Socials/X" unique_id=2072107806]
+offset_left = -17.241573
+offset_top = -17.241447
+offset_right = 17.241154
+offset_bottom = 17.24134
 flat = true
 
-[node name="TikTok" type="Button" parent="Socials" unique_id=222812293]
-layout_mode = 2
-icon = ExtResource("17_mgtej")
+[node name="TikTok" type="AnimatedSprite2D" parent="Socials" unique_id=1776191978]
+position = Vector2(350.86194, 20.689697)
+sprite_frames = SubResource("SpriteFrames_uouio")
+
+[node name="TikTokButton" type="Button" parent="Socials/TikTok" unique_id=222812293]
+offset_left = -17.241573
+offset_top = -17.241447
+offset_right = 17.241154
+offset_bottom = 17.24128
 flat = true
 
-[node name="Instagram" type="Button" parent="Socials" unique_id=620881931]
-layout_mode = 2
-icon = ExtResource("18_fh0ye")
+[node name="Instagram" type="AnimatedSprite2D" parent="Socials" unique_id=812364169]
+position = Vector2(406.0343, 20.689697)
+sprite_frames = SubResource("SpriteFrames_h4xic")
+
+[node name="InstagramButton" type="Button" parent="Socials/Instagram" unique_id=620881931]
+offset_left = -17.241573
+offset_top = -17.241447
+offset_right = 17.241154
+offset_bottom = 17.24128
 flat = true
 
 [node name="Patchnotes Popup" type="Control" parent="." unique_id=2031315132]
@@ -485,15 +722,29 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(7.1999993, 7.1999993)
 
-[node name="Itch" type="Button" parent="Patchnotes Popup/Options" unique_id=984519136]
-layout_mode = 2
-icon = ExtResource("12_og6oq")
-flat = true
+[node name="Itch" type="AnimatedSprite2D" parent="Patchnotes Popup/Options" unique_id=1447948103]
+position = Vector2(19.827759, 20.689697)
+sprite_frames = SubResource("SpriteFrames_ff6kx")
 
-[node name="GitHub" type="Button" parent="Patchnotes Popup/Options" unique_id=873110035]
-layout_mode = 2
-icon = ExtResource("12_seji6")
+[node name="ItchButton" type="Button" parent="Patchnotes Popup/Options/Itch" unique_id=242705903]
+offset_left = -17.241585
+offset_top = -17.24142
+offset_right = 16.379143
+offset_bottom = 17.241306
 flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="GitHub" type="AnimatedSprite2D" parent="Patchnotes Popup/Options" unique_id=73372734]
+position = Vector2(75.00012, 20.689697)
+sprite_frames = SubResource("SpriteFrames_ec4yk")
+
+[node name="GitHubButton" type="Button" parent="Patchnotes Popup/Options/GitHub" unique_id=1984918733]
+offset_left = -17.241577
+offset_top = -17.241577
+offset_right = 17.24115
+offset_bottom = 17.24115
+flat = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Close" type="Button" parent="Patchnotes Popup" unique_id=1621249097]
 layout_mode = 0
@@ -542,9 +793,9 @@ anchor_left = 0.67300004
 anchor_top = 0.84700006
 anchor_right = 0.67300004
 anchor_bottom = 0.84700006
-offset_left = 3.329956
+offset_left = 4.329956
 offset_top = 2.9319763
-offset_right = 229.32996
+offset_right = 230.32996
 offset_bottom = 63.931976
 grow_horizontal = 0
 grow_vertical = 0
@@ -585,19 +836,39 @@ grow_vertical = 2
 scale = Vector2(7.1999993, 7.1999993)
 theme_override_constants/separation = -5
 
-[node name="Itch" type="Button" parent="Updatenotes Popup/Options" unique_id=939780665]
-layout_mode = 2
-icon = ExtResource("12_og6oq")
-flat = true
+[node name="Itch" type="AnimatedSprite2D" parent="Updatenotes Popup/Options" unique_id=1221663905]
+position = Vector2(19.68887, 17.634142)
+sprite_frames = SubResource("SpriteFrames_ff6kx")
 
-[node name="GitHub" type="Button" parent="Updatenotes Popup/Options" unique_id=530933947]
-layout_mode = 2
-icon = ExtResource("12_seji6")
+[node name="ItchButton" type="Button" parent="Updatenotes Popup/Options/Itch" unique_id=1628122967]
+offset_left = -17.241585
+offset_top = -17.24142
+offset_right = 16.379143
+offset_bottom = 17.241306
 flat = true
+metadata/_edit_use_anchors_ = true
 
-[node name="YouTube" type="Button" parent="Updatenotes Popup/Options" unique_id=725266725]
-layout_mode = 2
-icon = ExtResource("15_wh4fq")
+[node name="GitHub" type="AnimatedSprite2D" parent="Updatenotes Popup/Options" unique_id=252007984]
+position = Vector2(55.000122, 17.634142)
+sprite_frames = SubResource("SpriteFrames_ec4yk")
+
+[node name="GitHubButton" type="Button" parent="Updatenotes Popup/Options/GitHub" unique_id=696334695]
+offset_left = -17.241577
+offset_top = -17.241577
+offset_right = 17.24115
+offset_bottom = 17.24115
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="YouTube" type="AnimatedSprite2D" parent="Updatenotes Popup/Options" unique_id=1897043323]
+position = Vector2(90.10054, 17.634142)
+sprite_frames = SubResource("SpriteFrames_mlcvw")
+
+[node name="YouTubeButton" type="Button" parent="Updatenotes Popup/Options/YouTube" unique_id=650696215]
+offset_left = -17.241573
+offset_top = -17.241447
+offset_right = 17.241154
+offset_bottom = 17.24134
 flat = true
 
 [node name="Close" type="Button" parent="Updatenotes Popup" unique_id=1227631042]
@@ -616,18 +887,18 @@ flat = true
 [connection signal="button_up" from="Buttons/Quit/QuitButton" to="." method="_on_quit_button_up"]
 [connection signal="button_up" from="VersionIndicator" to="." method="_on_version_indicator_button_up"]
 [connection signal="button_up" from="CurrentPatch" to="." method="_on_patch_indicator_button_up"]
-[connection signal="button_up" from="Socials/Itch" to="." method="_on_itch_button_up"]
-[connection signal="button_up" from="Socials/GitHub" to="." method="_on_git_hub_button_up"]
-[connection signal="button_up" from="Socials/Patreon" to="." method="_on_patreon_button_up"]
-[connection signal="button_up" from="Socials/Kickstarter" to="." method="_on_kickstarter_button_up"]
-[connection signal="button_up" from="Socials/YouTube" to="." method="_on_youtube_button_up"]
-[connection signal="button_up" from="Socials/X" to="." method="_on_x_button_up"]
-[connection signal="button_up" from="Socials/TikTok" to="." method="_on_tiktok_button_up"]
-[connection signal="button_up" from="Socials/Instagram" to="." method="_on_instagram_button_up"]
-[connection signal="button_up" from="Patchnotes Popup/Options/Itch" to="." method="_on_itch_patchnotes_button_up"]
-[connection signal="button_up" from="Patchnotes Popup/Options/GitHub" to="." method="_on_github_patchnotes_button_up"]
+[connection signal="button_up" from="Socials/Itch/ItchButton" to="." method="_on_itch_button_up"]
+[connection signal="button_up" from="Socials/GitHub/GitHubButton" to="." method="_on_github_button_up"]
+[connection signal="button_up" from="Socials/Patreon/PatreonButton" to="." method="_on_patreon_button_up"]
+[connection signal="button_up" from="Socials/Kickstarter/KickstarterButton" to="." method="_on_kickstarter_button_up"]
+[connection signal="button_up" from="Socials/YouTube/YouTubeButton" to="." method="_on_youtube_button_up"]
+[connection signal="button_up" from="Socials/X/XButton" to="." method="_on_x_button_up"]
+[connection signal="button_up" from="Socials/TikTok/TikTokButton" to="." method="_on_tiktok_button_up"]
+[connection signal="button_up" from="Socials/Instagram/InstagramButton" to="." method="_on_instagram_button_up"]
+[connection signal="button_up" from="Patchnotes Popup/Options/Itch/ItchButton" to="." method="_on_itch_patchnotes_button_up"]
+[connection signal="button_up" from="Patchnotes Popup/Options/GitHub/GitHubButton" to="." method="_on_github_patchnotes_button_up"]
 [connection signal="button_up" from="Patchnotes Popup/Close" to="." method="_on_close_button_up"]
-[connection signal="button_up" from="Updatenotes Popup/Options/Itch" to="." method="_on_itch_updatenotes_button_up"]
-[connection signal="button_up" from="Updatenotes Popup/Options/GitHub" to="." method="_on_github_updatenotes_button_up"]
-[connection signal="button_up" from="Updatenotes Popup/Options/YouTube" to="." method="_on_youtube_update_trailer_button_up"]
+[connection signal="button_up" from="Updatenotes Popup/Options/Itch/ItchButton" to="." method="_on_itch_updatenotes_button_up"]
+[connection signal="button_up" from="Updatenotes Popup/Options/GitHub/GitHubButton" to="." method="_on_github_updatenotes_button_up"]
+[connection signal="button_up" from="Updatenotes Popup/Options/YouTube/YouTubeButton" to="." method="_on_youtube_update_trailer_button_up"]
 [connection signal="button_up" from="Updatenotes Popup/Close" to="." method="_on_close_button_up"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0anv67k5qonf"
-path="res://.godot/imported/x.png-ff6500fb87953ac4c4171c0809a78a82.ctex"
+uid="uid://bexblf82rfcsx"
+path="res://.godot/imported/social_youtube.png-646ebdedb0a834cf884ec2f3b89a5364.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/icons/socials/x.png"
-dest_files=["res://.godot/imported/x.png-ff6500fb87953ac4c4171c0809a78a82.ctex"]
+source_file="res://assets/sprites/icons/socials/social_youtube.png"
+dest_files=["res://.godot/imported/social_youtube.png-646ebdedb0a834cf884ec2f3b89a5364.ctex"]
 
 [params]
 

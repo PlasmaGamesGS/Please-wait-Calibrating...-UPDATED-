@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqmehrwui5y5e"
-path="res://.godot/imported/instagram.png-398626899cadb9abc51001887996aa78.ctex"
+uid="uid://ck8ri8q3rd2uv"
+path="res://.godot/imported/social_tiktok.png-c33a64047b402582c763f5dfdf91ef50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/icons/socials/instagram.png"
-dest_files=["res://.godot/imported/instagram.png-398626899cadb9abc51001887996aa78.ctex"]
+source_file="res://assets/sprites/icons/socials/social_tiktok.png"
+dest_files=["res://.godot/imported/social_tiktok.png-c33a64047b402582c763f5dfdf91ef50.ctex"]
 
 [params]
 

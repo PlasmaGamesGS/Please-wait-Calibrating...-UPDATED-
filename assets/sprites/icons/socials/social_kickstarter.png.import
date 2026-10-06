@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb5wfw08vacj6"
-path="res://.godot/imported/kickstarter.png-943f87bad42d5ce599bfb5862ff46ad0.ctex"
+uid="uid://cw3708qblu30c"
+path="res://.godot/imported/social_kickstarter.png-c990eb2d565505fabc80310f87668046.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/icons/socials/kickstarter.png"
-dest_files=["res://.godot/imported/kickstarter.png-943f87bad42d5ce599bfb5862ff46ad0.ctex"]
+source_file="res://assets/sprites/icons/socials/social_kickstarter.png"
+dest_files=["res://.godot/imported/social_kickstarter.png-c990eb2d565505fabc80310f87668046.ctex"]
 
 [params]
 

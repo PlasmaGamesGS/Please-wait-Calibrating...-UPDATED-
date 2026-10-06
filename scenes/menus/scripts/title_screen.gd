@@ -6,6 +6,20 @@ extends Control
 @export var optionsButton: Button
 @export var quitButton: Button
 
+@export var itch: Button
+@export var itchPatch: Button
+@export var itchUpdate: Button
+@export var github: Button
+@export var githubPatch: Button
+@export var githubUpdate: Button
+@export var patreon: Button
+@export var kickstarter: Button
+@export var youtube: Button
+@export var youtubeTrailer: Button
+@export var x: Button
+@export var tiktok: Button
+@export var instagram: Button
+
 @export var PnPopup: Control
 @export var UnPopup: Control
 
@@ -15,11 +29,12 @@ extends Control
 
 #func _ready() -> void:
 	#playButton.grab_focus()
-#
+
 func _process(_delta: float) -> void:
 	_buttons()
-#
-#
+	_socialsButtons()
+
+
 func _buttons():
 	if playButton.button_pressed:
 		playSprite.animation = "press"
@@ -60,10 +75,76 @@ func _on_quit_button_up() -> void:
 
 #socials
 
+func _socialsButtons():
+	if itch.is_hovered():
+		itch.get_parent().frame = 1
+	else:
+		itch.get_parent().frame = 0
+	
+	if itchPatch.is_hovered():
+		itchPatch.get_parent().frame = 1
+	else:
+		itchPatch.get_parent().frame = 0
+	
+	if itchUpdate.is_hovered():
+		itchUpdate.get_parent().frame = 1
+	else:
+		itchUpdate.get_parent().frame = 0
+	
+	if github.is_hovered():
+		github.get_parent().frame = 1
+	else:
+		github.get_parent().frame = 0
+	
+	if githubPatch.is_hovered():
+		githubPatch.get_parent().frame = 1
+	else:
+		githubPatch.get_parent().frame = 0
+	if githubUpdate.is_hovered():
+		githubUpdate.get_parent().frame = 1
+	else:
+		githubUpdate.get_parent().frame = 0
+	
+	if patreon.is_hovered():
+		patreon.get_parent().frame = 1
+	else:
+		patreon.get_parent().frame = 0
+	
+	if kickstarter.is_hovered():
+		kickstarter.get_parent().frame = 1
+	else:
+		kickstarter.get_parent().frame = 0
+	
+	if youtube.is_hovered():
+		youtube.get_parent().frame = 1
+	else:
+		youtube.get_parent().frame = 0
+	
+	if youtubeTrailer.is_hovered():
+		youtubeTrailer.get_parent().frame = 1
+	else:
+		youtubeTrailer.get_parent().frame = 0
+	
+	if x.is_hovered():
+		x.get_parent().frame = 1
+	else:
+		x.get_parent().frame = 0
+	
+	if tiktok.is_hovered():
+		tiktok.get_parent().frame = 1
+	else:
+		tiktok.get_parent().frame = 0
+	
+	if instagram.is_hovered():
+		instagram.get_parent().frame = 1
+	else:
+		instagram.get_parent().frame = 0
+
+
 func _on_itch_button_up() -> void:
 	OS.shell_open("https://plasmagamez.itch.io")
 
-func _on_git_hub_button_up() -> void:
+func _on_github_button_up() -> void:
 	OS.shell_open("https://github.com/PlasmaGamesGS")
 
 func _on_patreon_button_up() -> void:

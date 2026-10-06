@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2okfdspw5vfg"
-path="res://.godot/imported/youtube.png-c86c9b82c954354d13730d1bc8882cd7.ctex"
+uid="uid://biedx8iqvixi4"
+path="res://.godot/imported/social_instagram.png-9210b4dc65f36b3fc4cd86dcd62d6d01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/icons/socials/youtube.png"
-dest_files=["res://.godot/imported/youtube.png-c86c9b82c954354d13730d1bc8882cd7.ctex"]
+source_file="res://assets/sprites/icons/socials/social_instagram.png"
+dest_files=["res://.godot/imported/social_instagram.png-9210b4dc65f36b3fc4cd86dcd62d6d01.ctex"]
 
 [params]
 
